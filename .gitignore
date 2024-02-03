@@ -1,3 +1,10 @@
 
 Library/test.txt
 Library/PackageCache/com.unity.burst@1.8.9
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
