@@ -39,6 +39,29 @@ public class Interface : MonoBehaviour
         ScriptType type = domain.CompileAndLoadMainSource(sourceCode);
         type.CreateInstance(gameObject);
         string result = type.CallStatic("ExampleMethod", 1, 2).ToString();
+        
+        
+        //match test cases here
+        try
+        {
+            int intValue = Int32.Parse(result);
+            if (intValue == 10)
+            {
+                Debug.Log("Correct Answer From User");
+            }
+            else
+            {
+                Debug.Log("Incorrect Answer From User");
+            }
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+            Debug.Log("Incorrect Answer From User");
+        }
+
+
+
         Debug.Log("User's result is: " + result);
     }
 
