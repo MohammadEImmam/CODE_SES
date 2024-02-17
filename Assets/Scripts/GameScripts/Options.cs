@@ -8,6 +8,8 @@ namespace ScenarioNamespace {
         negative
     }
 class Options {
+    /* Scenarios have options for users to choose, each option has a title,
+     result, type, and a perctange of impact on their performance */
     public string title { get; set; }  
     public string result { get; set; }
     public scenarioType type;

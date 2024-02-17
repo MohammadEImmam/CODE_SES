@@ -4,7 +4,10 @@ using System.Collections.Generic;
 namespace ScenarioNamespace {
 
 class Scenario
-{
+{ 
+    /* Each Scenario has a title, description, and a list of options
+     for the user to choose how they would like to respond. */
+
     string title { get; set; }
     string description { get; set; }
     List<Options> options;
@@ -42,7 +45,7 @@ class Scenario
         
         
 
-        // Print task info
+        // Print Scenario info
         Console.WriteLine("Scenario: " + scenario1.title);
         Console.WriteLine("Description: " + scenario1.description);
         Console.WriteLine("\n Options...");
