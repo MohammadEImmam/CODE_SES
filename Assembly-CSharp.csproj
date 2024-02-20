@@ -58,6 +58,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualTouchZone.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\Output.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualJoystick.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\Lexer\MatchLexer.cs" />
      <Compile Include="Assets\Scripts\CrossConnections\CaseMatcher.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\Scenario.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\CodeEditorTheme.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
@@ -74,6 +76,7 @@
      <Compile Include="Assets\Scripts\Jobs\Job.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\Lexer\ILexer.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\player.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
@@ -81,6 +84,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\Lexer\InputStringLexer.cs" />
+     <Compile Include="Assets\Scripts\CrossConnections\Trigger_IDE.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\Lexer\CommentGroupMatch.cs" />
      <Compile Include="Assets\Scripts\IDE\Interface.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
@@ -94,9 +98,11 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventCheck.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_UiFrameRateCounter.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\task.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_B.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\Utilities\MobileDisableAutoSwitchControls.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SkewTextExample.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\Options.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
@@ -143,6 +149,7 @@
      <None Include="Assets\RoslynCSharp\Error On Import.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
+     <Folder Include="Assets\Primitve Textures" />
      <Folder Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs" />
      <Folder Include="Assets\InGameCodeEditor\CompatibilityDemo" />
      <Folder Include="Assets\RoslynCSharp\Scripts" />
