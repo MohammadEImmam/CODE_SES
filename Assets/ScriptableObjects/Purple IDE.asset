@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Purple IDE
   desc: Purple colors, this one looks pretty fun
   price: 15
+  itemImage: {fileID: 21300000, guid: 5502f59543dcb9942802c3fe5c286836, type: 3}

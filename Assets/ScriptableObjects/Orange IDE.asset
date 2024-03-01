@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Orange IDE Theme
   desc: Orange colors, very warm theme
   price: 15
+  itemImage: {fileID: 21300000, guid: 503e7d27acba32949805d772231fab61, type: 3}

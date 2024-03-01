@@ -15,3 +15,4 @@ MonoBehaviour:
   name: Light IDE
   desc: Light colors, who likes these themes?
   price: 10
+  itemImage: {fileID: 21300000, guid: 6fc02bddfccc0c34ea913bbf08f3361a, type: 3}
