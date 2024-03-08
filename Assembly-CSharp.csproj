@@ -62,6 +62,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_DigitValidator.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\VirtualInputs\UIVirtualButton.cs" />
+     <Compile Include="Assets\Scripts\shopItemSO.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -70,6 +71,7 @@
      <Compile Include="Assets\Scripts\CrossConnections\CaseMatcher.cs" />
      <Compile Include="Assets\Scripts\GameScripts\Scenario.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\CodeEditorTheme.cs" />
+     <Compile Include="Assets\Scripts\CrossConnections\Desktop.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
      <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\BasicRigidBodyPush.cs" />
      <Compile Include="Assets\Scripts\CrossConnections\IDEUserFunctions.cs" />
@@ -80,6 +82,7 @@
      <Compile Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs\UICanvasControllerInput.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+     <Compile Include="Assets\Scripts\shopManager.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
@@ -107,6 +110,7 @@
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshProFloatingText.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\Lexer\KeywordGroupMatch.cs" />
+     <Compile Include="Assets\Scripts\shopTemplate.cs" />
      <Compile Include="Assets\StarterAssets\FirstPersonController\Scripts\FirstPersonController.cs" />
      <Compile Include="Assets\StarterAssets\InputSystem\StarterAssetsInputs.cs" />
      <Compile Include="Assets\InGameCodeEditor\Scripts\AutoIndent.cs" />
@@ -123,6 +127,7 @@
      <Folder Include="Assets\TextMesh Pro\Resources\Sprite Assets" />
      <Folder Include="Assets\Scripts\Jobs" />
      <Folder Include="Assets\Scripts\GameScripts" />
+     <Folder Include="Assets\ScriptableObjects" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
      <Folder Include="Assets\RoslynCSharp\Scripts\RoslynCSharp.Compiler" />
      <Folder Include="Assets\StarterAssets\Environment\Art\Materials" />
@@ -144,16 +149,19 @@
      <Folder Include="Assets\StarterAssets\FirstPersonController\Prefabs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets\StarterAssets\Environment\Art\Skybox" />
+     <Folder Include="Assets\Prefabs" />
      <Folder Include="Assets\TextMesh Pro" />
      <Folder Include="Assets\StarterAssets\FirstPersonController\Scenes" />
      <None Include="Assets\RoslynCSharp\Error On Import.txt" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts" />
      <Folder Include="Assets\TextMesh Pro\Examples &amp; Extras\Resources" />
+     <Folder Include="Assets\images\Desktop" />
      <Folder Include="Assets\Primitve Textures" />
      <Folder Include="Assets\StarterAssets\Mobile\Scripts\CanvasInputs" />
      <Folder Include="Assets\InGameCodeEditor\CompatibilityDemo" />
      <Folder Include="Assets\RoslynCSharp\Scripts" />
      <Folder Include="Assets\StarterAssets\Environment\Art\Models" />
+     <Folder Include="Assets\images" />
      <Folder Include="Assets\StarterAssets\Mobile\UI" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
      <Folder Include="Assets\RoslynCSharp\Plugin" />

@@ -7,6 +7,7 @@ TagManager:
   - LogText
   - CinemachineTarget
   - IDETrigger
+  - taskUI
   layers:
   - Default
   - TransparentFX
