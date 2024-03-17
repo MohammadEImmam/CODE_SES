@@ -3,31 +3,30 @@ using System.Collections.Generic;
 using RoslynCSharp;
 using UnityEngine;
 
-public class Job : MonoBehaviour
+/*
+public enum JobType
 {
-    public string jobName;
+    Algo,
+    DataStructures,
+    WebDevelopment
+}*/
+
+[System.Serializable]
+public class Job
+{
+    public string jobTitle;
+    public int jobSalary;
+    public int jobDiff;
+    public string jobType;
     public string jobDescription;
-    public string methodName;
-    public string output;
-    public JobType jobType;
     
-    
-    public Job(string jobName, string jobDescription, JobType jobType , string methodName)
+    //Constrcutor for the Job object
+    public Job(string jobTitle, string jobType, int jobSalary, int jobDiff, string jobDescription)
     {
-        this.jobName = jobName;
+        this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
+        this.jobSalary = jobSalary;
+        this.jobDiff = jobDiff;
         this.jobType = jobType;
-        this.methodName = methodName;
     }
-
-
-    string CompileJob(string userCode, GameObject IDE)
-    {
-        ScriptDomain domain = ScriptDomain.CreateDomain(jobName+"Domain");
-        ScriptType type = domain.CompileAndLoadMainSource(userCode);
-        type.CreateInstance(IDE);
-        type.SafeCallStatic(methodName);
-        return "";
-    }
-
 }
