@@ -1,0 +1,4 @@
+{
+    "dotnet.preferCSharpExtension": true,
+    "typescript.referencesCodeLens.enabled": false
+}

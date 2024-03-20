@@ -13,6 +13,13 @@ public class Desktop : MonoBehaviour
     public bool appActive = false;
     
 
+    void Start() {
+        if (!PlayerPrefs.HasKey("Money"))
+        {
+            // If it doesn't exist, set a default value for "Money"
+            PlayerPrefs.SetInt("Money", 1500); 
+        }
+    }
     public void TaskManager()
     {
         desk.SetActive(false);

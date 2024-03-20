@@ -14,6 +14,8 @@ public class shopManager : MonoBehaviour {
 
     public void Start() {
         loadItems();
+        money = PlayerPrefs.GetInt("Money");
+        moneyUI.text = "Money: " + money;
     }
     public void Update() {
 
@@ -45,5 +47,9 @@ public class shopManager : MonoBehaviour {
 
             //unlock item for the user
         }
+
+        // remove money
+        PlayerPrefs.SetInt("Money", money);
+
     }
 }
