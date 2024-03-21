@@ -4,26 +4,101 @@ using CrossConnections;
 using RoslynCSharp;
 using RoslynCSharp.Compiler;
 using UnityEngine;
+using System.Text.RegularExpressions;
+
+
 public class Interface : MonoBehaviour
 {
     private ScriptDomain domain = null;
     public GameObject textBox;
+
+    public Job job;
     private string sourceCode = @"
         using UnityEngine;
         class TestingDomain
         {
-             static int ExampleMethod(int input, int input_2)
+             static #RETURN_TYPE# #METHODNAME#($)
             {
-                IDE console = new IDE();
-                int result = input + input_2;   
-                console.log(result);
-                return result;
+                IDE console = new IDE(); // required to interact with console
+                // console.log(); <- can be used to interact with console/debugging
+
+
+
+
+
+
+                return null;
             }
         }";
 
     void Start()
     {
         
+        TextAsset jobText = Resources.Load<TextAsset>("AddTwoNums");
+        string jsonContent = jobText.text;
+        job = JsonUtility.FromJson<Job>(jsonContent);
+        
+        //building the intial code
+        sourceCode = Regex.Replace(sourceCode, @"#RETURN_TYPE#", job.returnType);
+        sourceCode = Regex.Replace(sourceCode, @"#METHODNAME#", job.MethodName);
+        if (job.returnType == "int")
+        {
+            sourceCode = Regex.Replace(sourceCode, @"null", "0");
+        }
+
+        string paramsReplacement = "";
+        for (int i = 0; i < job.Params.Count; i++)
+        {
+            paramsReplacement = paramsReplacement + job.Params[i].type + " " + job.Params[i].name;
+            if (i != job.Params.Count-1)
+            {
+                paramsReplacement = paramsReplacement + " ,";
+            }
+        }
+
+        sourceCode = Regex.Replace(sourceCode, @"\$", paramsReplacement);
+        
+
+        for (int i = 0; i < job.TestCases.Count; i++)
+        {
+            job.TestCases[i].finalParams = new List<object>();
+            for (int j = 0; j < job.TestCases[i].args.Count; j++)
+            {
+                object convertedValue = ConvertToType(job.TestCases[i].args[j].type, job.TestCases[i].args[j].name);
+                if (convertedValue != null)
+                {
+                    job.TestCases[i].finalParams.Add(convertedValue);
+                }
+            }
+        }
+
+
+        object ConvertToType(string type, string value)
+        {
+            switch (type.ToLower())
+            {
+                case "int":
+                    if (int.TryParse(value, out int intValue))
+                    {
+                        return intValue;
+                    }
+
+                    break;
+                case "string":
+                    return value;
+                case "bool":
+                    if (bool.TryParse(value, out bool boolValue))
+                    {
+                        return boolValue;
+                    }
+
+                    break;
+                // Add more cases as needed for other types
+            }
+
+            return null;
+        }
+
         //get the inputfield text and set the default value to sourceCode
         textBox.GetComponent<TMPro.TMP_InputField>().text = sourceCode;
         
@@ -41,20 +116,7 @@ public class Interface : MonoBehaviour
         type.CreateInstance(gameObject);
         
         
-        //test case 1
-        List<object> args = new List<object> { 11, 1 };
-        TestCase case1 = new TestCase("caseA", "tests tests", "12", args);
-        
-        
-        //test case 2
-        List<object> args_ = new List<object> { 13, 5 };
-        TestCase case2 = new TestCase("caseB", "tests more tests", "18", args_);
-
-        
-        List<TestCase> testCases = new List<TestCase>();
-        testCases.Add(case1);
-        testCases.Add(case2);
-        CaseMatcher matcher = new CaseMatcher(type,"ExampleMethod", testCases);
+        CaseMatcher matcher = new CaseMatcher(type, job);
         
         
         //match test cases here

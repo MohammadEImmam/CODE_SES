@@ -53,7 +53,6 @@
      <Compile Include="Assets/LeanTween/Framework/LeanTest.cs" />
      <Compile Include="Assets/LeanTween/Testing/TestingDescr.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/EnvMapAnimator.cs" />
-     <Compile Include="Assets/Scripts/CrossConnections/TestCase.cs" />
      <Compile Include="Assets/StarterAssets/TutorialInfo/Scripts/Readme.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
@@ -234,6 +233,7 @@
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne Attribution.txt" />
      <Folder Include="Assets/LeanTween/Examples" />
      <Folder Include="Assets/StarterAssets/InputSystem" />
+     <None Include="Assets/Resources/AddTwoNums.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Custom-Atlas.shader" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Materials" />
      <Folder Include="Assets/KeyboardAdjustableColors/Model" />

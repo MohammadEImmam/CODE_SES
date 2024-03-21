@@ -1,33 +1,44 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
-using RoslynCSharp;
-using UnityEngine;
 
-public class Job : MonoBehaviour
+namespace CrossConnections
 {
-    public string jobName;
-    public string jobDescription;
-    public string methodName;
-    public string output;
-    public JobType jobType;
-    
-    
-    public Job(string jobName, string jobDescription, JobType jobType , string methodName)
+    [Serializable]
+    public class Job
     {
-        this.jobName = jobName;
-        this.jobDescription = jobDescription;
-        this.jobType = jobType;
-        this.methodName = methodName;
+        public string Name;
+        public string Desc;
+        public string MethodName;
+        public string returnType;
+        public List<Param> Params;
+        public List<TestCase> TestCases;
+
+        [Serializable]
+        public class Param
+        {
+            public string type;
+            public string name;
+        }
+
+        [Serializable]
+
+        public class TestCase
+        {
+            //optional identifying params
+            private string desc;
+            public string output;
+            public List<Param> args;
+            public List<object> finalParams;
+
+            public TestCase(string desc, string output, List<Param> args)
+            {
+                this.desc = desc;
+                this.output = output;
+                this.args = args;
+                this.finalParams = new List<object> { };
+            }
+        }
+
+
     }
-
-
-    string CompileJob(string userCode, GameObject IDE)
-    {
-        ScriptDomain domain = ScriptDomain.CreateDomain(jobName+"Domain");
-        ScriptType type = domain.CompileAndLoadMainSource(userCode);
-        type.CreateInstance(IDE);
-        type.SafeCallStatic(methodName);
-        return "";
-    }
-
 }
