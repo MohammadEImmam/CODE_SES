@@ -1,8 +1,9 @@
 using System;
+using System.Collections.Generic;
+using CrossConnections;
 using RoslynCSharp;
 using RoslynCSharp.Compiler;
 using UnityEngine;
-
 public class Interface : MonoBehaviour
 {
     private ScriptDomain domain = null;
@@ -38,31 +39,30 @@ public class Interface : MonoBehaviour
         sourceCode = textBox.GetComponent<TMPro.TMP_InputField>().text;
         ScriptType type = domain.CompileAndLoadMainSource(sourceCode);
         type.CreateInstance(gameObject);
-        string result = type.CallStatic("ExampleMethod", 1, 2).ToString();
+        
+        
+        //test case 1
+        List<object> args = new List<object> { 11, 1 };
+        TestCase case1 = new TestCase("caseA", "tests tests", "12", args);
+        
+        
+        //test case 2
+        List<object> args_ = new List<object> { 13, 5 };
+        TestCase case2 = new TestCase("caseB", "tests more tests", "18", args_);
+
+        
+        List<TestCase> testCases = new List<TestCase>();
+        testCases.Add(case1);
+        testCases.Add(case2);
+        CaseMatcher matcher = new CaseMatcher(type,"ExampleMethod", testCases);
         
         
         //match test cases here
-        try
-        {
-            int intValue = Int32.Parse(result);
-            if (intValue == 10)
-            {
-                Debug.Log("Correct Answer From User");
-            }
-            else
-            {
-                Debug.Log("Incorrect Answer From User");
-            }
-        }
-        catch (Exception e)
-        {
-            Debug.Log(e);
-            Debug.Log("Incorrect Answer From User");
-        }
+
+        matcher.MatchCases();
 
 
-
-        Debug.Log("User's result is: " + result);
+        //Debug.Log("User's result is: " + result);
     }
 
 }
