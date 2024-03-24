@@ -20,27 +20,51 @@ namespace CrossConnections
         }
 
 
-        public void MatchCases()
+        void Write(string message)
         {
+            Debug.Log(message);
+            IDE.instance.log(message);
+        }
+        public bool MatchCases()
+        {
+            bool allPassed = true;
 
             for (int i = 0; i < job.TestCases.Count; i++)
             {
-                string result = UserCode.CallStatic(job.MethodName, job.TestCases[i].finalParams.ToArray()).ToString();
+                var callResult = UserCode.CallStatic(job.MethodName, job.TestCases[i].finalParams.ToArray());
+
+                string result = callResult.ToString();
+                if (Equals(callResult, true))
+                    result = "true";
+                if (Equals(callResult, false))
+                    result = "false";
                 if (job.TestCases[i].output == result)
                 {
-                    Debug.Log("-------------------------");
-                    Debug.Log("Test Case Passed");
-                    Debug.Log("-------------------------");
+                    Write("-------------------------");
+                    Write("Test Case Passed");
+                    Write("-------------------------");
                 }
                 else
                 {
-                    Debug.Log("-------------------------");
-                    Debug.Log("Test Case Failed");
-                    Debug.Log("EXPECTED VALUE : " + job.TestCases[i].output);
-                    Debug.Log("GOT VALUE : " + result);
-                    Debug.Log("-------------------------");
+                    Write("-------------------------");
+                    Write("Test Case Failed");
+                    string arguments = "";
+                    foreach (var param in job.TestCases[i].finalParams)
+                    {
+                        arguments += param + ", ";
+                    }
+                    if (arguments.Length > 2)
+                        arguments = arguments.Substring(0, arguments.Length - 2);
+                    Write("ARGUMENTS : " + arguments);
+
+                    Write("EXPECTED VALUE : " + job.TestCases[i].output);
+                    Write("GOT VALUE : " + result);
+                    Write("-------------------------");
+                    allPassed = false;
                 }
             }
+
+            return allPassed;
         }
     }
 }

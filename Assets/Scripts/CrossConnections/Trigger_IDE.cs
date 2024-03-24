@@ -14,8 +14,12 @@ public class Trigger_IDE : MonoBehaviour
     public GameObject IDE_;
     void Update()
     {
+        if (!Player)
+        {
+            Player = PlayerHook.instance.gameObject;
+        }
         Desktop desktop = DesktopManager.GetComponent<Desktop>();
-        bool appActive = desktop.appActive;
+        bool appActive = desktop && desktop.appActive;
 
         if (appActive)
         {
@@ -30,20 +34,20 @@ public class Trigger_IDE : MonoBehaviour
             Cursor.visible = true;
             Cursor.lockState = CursorLockMode.None;
         }
-        
-        
+
+
         if (isPlayerInTrigger && Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("IDE Deactivated!");
             IDE.SetActive(false);
             Player.SetActive(true);
-            Cursor.visible = false;
             IDE_.SetActive(false);
-            // Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
         }
-        
+
     }
-    
+
+
     void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -51,7 +55,7 @@ public class Trigger_IDE : MonoBehaviour
             isPlayerInTrigger = true;
         }
     }
-    
+
     void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -59,5 +63,5 @@ public class Trigger_IDE : MonoBehaviour
             isPlayerInTrigger = false;
         }
     }
-    
+
 }
