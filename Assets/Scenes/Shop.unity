@@ -144,7 +144,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Name
-      value: item_template (3)
+      value: Light IDE Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 446548734084473900, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: I mean who would ever use this?
+      objectReference: {fileID: 0}
+    - target: {fileID: 518565157173360287, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Purchase
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -164,12 +172,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 3
+      value: 42000
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2792543357105898921, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: 42000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955909248305172949, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 6fc02bddfccc0c34ea913bbf08f3361a, type: 3}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -249,6 +265,10 @@ PrefabInstance:
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565929284424249872, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Light IDE Theme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -884,7 +904,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Name
-      value: item_template
+      value: Dark IDE Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 446548734084473900, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Super Dark, Super Cool!
+      objectReference: {fileID: 0}
+    - target: {fileID: 518565157173360287, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Purchase
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -903,9 +935,21 @@ PrefabInstance:
       value: shopManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2792543357105898921, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955909248305172949, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 3555462786dfc4145855cfbb150245f5, type: 3}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -986,7 +1030,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8565929284424249872, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Dark IDE Theme
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5400246852576031194, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -996,17 +1045,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
   m_PrefabInstance: {fileID: 1106480935}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1106480937 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5400246852576031194, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
-  m_PrefabInstance: {fileID: 1106480935}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 80a85cc444843ab47aa31bf55abb1da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1194881116 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3955909248305172949, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
@@ -1028,7 +1066,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Name
-      value: item_template (1)
+      value: Purple IDE Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 446548734084473900, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Very purple, kinda like this shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 518565157173360287, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Purchase
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1048,12 +1094,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2792543357105898921, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955909248305172949, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5502f59543dcb9942802c3fe5c286836, type: 3}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1133,6 +1187,10 @@ PrefabInstance:
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565929284424249872, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Purple IDE Theme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1367,7 +1425,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1580740590}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f8be4b5c288c1f47956272f6b6d4f9a, type: 3}
+  m_Script: {fileID: 11500000, guid: 25cedf3327e4c9c41a9cae2b98e6882b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   money: 0
@@ -1378,7 +1436,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e7acfcbec15ba9642bd56dece74fede3, type: 2}
   - {fileID: 11400000, guid: b01aec45f8d5ec349b3b72f4a48f847d, type: 2}
   panels:
-  - {fileID: 1106480937}
+  - {fileID: 0}
   - {fileID: 1459192006}
   - {fileID: 1618524357}
   - {fileID: 1879599317}
@@ -1408,7 +1466,17 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Name
-      value: item_template (2)
+      value: Orange IDE Theme
+      objectReference: {fileID: 0}
+    - target: {fileID: 446548734084473900, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Sunset colors
+      objectReference: {fileID: 0}
+    - target: {fileID: 518565157173360287, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: 'Purchase
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1428,12 +1496,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 2792543357105898921, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3955909248305172949, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 503e7d27acba32949805d772231fab61, type: 3}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1513,6 +1589,10 @@ PrefabInstance:
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8565929284424249872, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_text
+      value: Orange IDE Theme
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1692,6 +1772,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: item_template (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -1730,7 +1814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMin.x
@@ -1738,7 +1822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1778,11 +1862,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1208.775
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -243.66554
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1996,6 +2080,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: item_template (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2036478517748710282, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 3
@@ -2034,7 +2122,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMin.x
@@ -2042,7 +2130,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2082,11 +2170,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1208.775
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -243.66554
       objectReference: {fileID: 0}
     - target: {fileID: 3997079955289686174, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -2225,7 +2313,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -96.35925}
+  m_AnchoredPosition: {x: 197, y: -96.35925}
   m_SizeDelta: {x: 0, y: -192.7185}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044618254
