@@ -56,6 +56,10 @@ namespace Computer
             {
                 titleText.text = file.fullName;
                 codeEditor.Text = file.data;
+                if (PlayerPrefs.HasKey(file.name))
+                {
+                    codeEditor.Text = PlayerPrefs.GetString(file.name);
+                }
             }
             else
             {
@@ -80,6 +84,7 @@ namespace Computer
                 this.currentFile = file;
             }
             computer.Save(currentFile, codeEditor.Text);
+            PlayerPrefs.SetString(currentFile.name, codeEditor.Text);
         }
 
         /// <summary>
