@@ -96,6 +96,7 @@ namespace Computer
         public void Run()
         {
             console.Open();
+            Save();
             try
             {
                 var programAsm = Compiler.instance.Compile(codeEditor.Text, errorMessage => IDE.instance.logCompilerError(errorMessage));

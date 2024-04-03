@@ -42,7 +42,7 @@ namespace Computer
 
         public override void OnStart()
         {
-            JobManager.instance.ValidateJobs();
+            //JobManager.instance.ValidateJobs();
             Refresh();
         }
 

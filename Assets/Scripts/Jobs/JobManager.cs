@@ -44,6 +44,14 @@ namespace CrossConnections
             foreach (var job in jobs)
             {
                 MakeJobFinalParams(job.jobObj);
+                string jobStatusKey = job.jobObj.Name + "-Status";
+                if(PlayerPrefs.HasKey(jobStatusKey))
+                {
+                    if (PlayerPrefs.GetInt(jobStatusKey) == 1)
+                    {
+                        job.status = JobStatus.Finished;
+                    }
+                }
             }
         }
 
@@ -110,6 +118,8 @@ namespace CrossConnections
             {
                 job.status = JobStatus.Finished;
                 Debug.Log("Job Status Changed");
+                string jobStatusKey = job.jobObj.Name + "-Status";
+                PlayerPrefs.SetInt(jobStatusKey, 1);
             }
             else
             {
