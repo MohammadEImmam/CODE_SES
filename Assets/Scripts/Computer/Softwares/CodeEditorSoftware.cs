@@ -24,6 +24,8 @@ namespace Computer
         public Button runButton;
         public ConsoleUI console;
 
+        public GameObject taskMenu;
+
         public File currentFile { get; set; }
         public ManagedJob currentJob { get; set; }
 
@@ -113,6 +115,7 @@ namespace Computer
                     var output = Compiler.instance.ExecuteMainFunction(programAsm, new string[0]);
                     IDE.instance.log(output);
                     print(output);
+                    Debug.Log("Job not found!");
                 }
             }
             catch (TargetInvocationException e)

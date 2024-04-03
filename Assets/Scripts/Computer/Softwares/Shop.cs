@@ -20,12 +20,12 @@ namespace Computer
         IEnumerator LoadScene()
         {
             //load the shop scene
-            yield return SceneManager.LoadSceneAsync(1, LoadSceneMode.Additive);
+            yield return SceneManager.LoadSceneAsync("Shop", LoadSceneMode.Additive);
             yield return null;
-            // GameObject.FindWithTag("ShopManager").GetComponent<shopManager>().onExit += () =>
-            // {
-            //     computer.Close(this);
-            // };
+            GameObject.FindWithTag("ShopManager").GetComponent<shopManager>().onExit += () =>
+            {
+                computer.Close(this);
+            };
         }
 
         public override void OnEnd()
@@ -33,7 +33,7 @@ namespace Computer
             base.OnEnd();
             StopAllCoroutines();
             //remove the shop  scene
-            SceneManager.UnloadScene(1);
+            SceneManager.UnloadScene("Shop");
         }
     }
 }

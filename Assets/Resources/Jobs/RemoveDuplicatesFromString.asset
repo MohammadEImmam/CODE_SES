@@ -9,7 +9,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: RemoveDuplicatesFromString
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Remove Duplicates from String
+    Desc: Given a string, remove duplicate characters and return a new string with
+      unique characters only.
+    MethodName: RemoveDuplicatesFromString
+    returnType: string
+    Params:
+    - type: string
+      name: inputString
+    TestCases:
+    - output: abcdef
+      args:
+      - type: string
+        name: aabbccddeeff
+    - output: abcd
+      args:
+      - type: string
+        name: abcd
+    - output: a
+      args:
+      - type: string
+        name: aaaaa
+    - output: 
+      args:
+      - type: string
+        name: 
+  solution: "using System;\r\nusing System.Text;\r\n\r\npublic static class Solution\r\n{\r\n   
+    public static string RemoveDuplicatesFromString(string inputString)\r\n    {\r\n       
+    StringBuilder result = new StringBuilder();\r\n        foreach (char c in inputString)\r\n       
+    {\r\n            if (result.ToString().IndexOf(c) == -1)\r\n            {\r\n               
+    result.Append(c);\r\n            }\r\n        }\r\n        return result.ToString();\r\n   
+    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Remove Duplicates from String\",\r\n   
+    \"Desc\": \"Given a string, remove duplicate characters and return a new string
+    with unique characters only.\",\r\n    \"MethodName\": \"RemoveDuplicatesFromString\",\r\n   
+    \"returnType\": \"string\",\r\n    \"Params\": [\r\n        {\r\n           
+    \"type\": \"string\",\r\n            \"name\": \"inputString\"\r\n        }\r\n   
+    ],\r\n    \"TestCases\": [\r\n        {\r\n            \"desc\": \"Test case
+    with duplicates\",\r\n            \"output\": \"abcdef\",\r\n            \"args\":
+    [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"aabbccddeeff\"\r\n                }\r\n            ]\r\n        },\r\n       
+    {\r\n            \"desc\": \"Test case with no duplicates\",\r\n            \"output\":
+    \"abcd\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"abcd\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with all duplicates\",\r\n            \"output\": \"a\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"aaaaa\"\r\n                }\r\n            ]\r\n        },\r\n       
+    {\r\n            \"desc\": \"Test case with an empty string\",\r\n           
+    \"output\": \"\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"\"\r\n               
+    }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0

@@ -9,7 +9,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: IsPalindrome
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Check Palindrome
+    Desc: Given a string, check if it is a palindrome.
+    MethodName: IsPalindrome
+    returnType: bool
+    Params:
+    - type: string
+      name: inputString
+    TestCases:
+    - output: true
+      args:
+      - type: string
+        name: racecar
+    - output: false
+      args:
+      - type: string
+        name: hello
+    - output: true
+      args:
+      - type: string
+        name: 
+    - output: true
+      args:
+      - type: string
+        name: a
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static bool IsPalindrome(string inputString)\r\n    {\r\n        int left = 0;\r\n       
+    int right = inputString.Length - 1;\r\n\r\n        while (left < right)\r\n       
+    {\r\n            if (inputString[left] != inputString[right])\r\n           
+    {\r\n                return false;\r\n            }\r\n            left++;\r\n           
+    right--;\r\n        }\r\n\r\n        return true;\r\n    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Check Palindrome\",\r\n    \"Desc\": \"Given
+    a string, check if it is a palindrome.\",\r\n    \"MethodName\": \"IsPalindrome\",\r\n   
+    \"returnType\": \"bool\",\r\n    \"Params\": [\r\n        {\r\n            \"type\":
+    \"string\",\r\n            \"name\": \"inputString\"\r\n        }\r\n    ],\r\n   
+    \"TestCases\": [\r\n        {\r\n            \"desc\": \"Test case with a palindrome\",\r\n           
+    \"output\": \"true\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"racecar\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with a non-palindrome\",\r\n            \"output\": \"false\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"hello\"\r\n                }\r\n            ]\r\n        },\r\n       
+    {\r\n            \"desc\": \"Test case with an empty string\",\r\n           
+    \"output\": \"true\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with a single character\",\r\n            \"output\": \"true\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"a\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0

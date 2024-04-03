@@ -9,7 +9,77 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: CountOccurencies
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Count Occurrences of Substring
+    Desc: Given a string and a substring, count the number of occurrences of that
+      substring in the string.
+    MethodName: CountOccurrences
+    returnType: int
+    Params:
+    - type: string
+      name: inputString
+    - type: string
+      name: substring
+    TestCases:
+    - output: 2
+      args:
+      - type: string
+        name: hellohello
+      - type: string
+        name: hello
+    - output: 0
+      args:
+      - type: string
+        name: hello world
+      - type: string
+        name: foo
+    - output: 5
+      args:
+      - type: string
+        name: aaaaa
+      - type: string
+        name: a
+    - output: 0
+      args:
+      - type: string
+        name: 
+      - type: string
+        name: a
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static int CountOccurrences(string inputString, string substring)\r\n    {\r\n       
+    if (string.IsNullOrEmpty(substring))\r\n        {\r\n            return 0;\r\n       
+    }\r\n\r\n        int count = 0;\r\n        int index = 0;\r\n\r\n        while
+    ((index = inputString.IndexOf(substring, index)) != -1)\r\n        {\r\n           
+    index += substring.Length;\r\n            count++;\r\n        }\r\n\r\n       
+    return count;\r\n    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Count Occurrences of Substring\",\r\n   
+    \"Desc\": \"Given a string and a substring, count the number of occurrences of
+    that substring in the string.\",\r\n    \"MethodName\": \"CountOccurrences\",\r\n   
+    \"returnType\": \"int\",\r\n    \"Params\": [\r\n        {\r\n            \"type\":
+    \"string\",\r\n            \"name\": \"inputString\"\r\n        },\r\n       
+    {\r\n            \"type\": \"string\",\r\n            \"name\": \"substring\"\r\n       
+    }\r\n    ],\r\n    \"TestCases\": [\r\n        {\r\n            \"desc\": \"Test
+    case with multiple occurrences\",\r\n            \"output\": \"2\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"hellohello\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"hello\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with no occurrence\",\r\n            \"output\": \"0\",\r\n            \"args\":
+    [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"hello world\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"foo\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with all occurrences\",\r\n            \"output\": \"5\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"aaaaa\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"a\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with an empty string\",\r\n            \"output\": \"0\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"a\"\r\n               
+    }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0

@@ -107,9 +107,14 @@ namespace CrossConnections
             var caseMatcher = new CaseMatcher(asm.MainType, job.jobObj);
             var result = caseMatcher.MatchCases();
             if (result)
+            {
                 job.status = JobStatus.Finished;
+                Debug.Log("Job Status Changed");
+            }
             else
+            {
                 job.status = JobStatus.Not_Finished;
+            }
         }
 
         public void ValidateJob(ManagedJob job, string sourceCode)

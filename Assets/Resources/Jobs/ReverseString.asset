@@ -9,7 +9,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: ReverseString
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Reverse a String
+    Desc: Given a string, reverse it.
+    MethodName: ReverseString
+    returnType: string
+    Params:
+    - type: string
+      name: inputString
+    TestCases:
+    - output: olleH
+      args:
+      - type: string
+        name: Hello
+    - output: dlrow olleH
+      args:
+      - type: string
+        name: Hello world
+    - output: 
+      args:
+      - type: string
+        name: 
+    - output: a
+      args:
+      - type: string
+        name: a
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static string ReverseString(string inputString)\r\n    {\r\n        char[] charArray
+    = inputString.ToCharArray();\r\n        Array.Reverse(charArray);\r\n       
+    return new string(charArray);\r\n    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Reverse a String\",\r\n    \"Desc\": \"Given
+    a string, reverse it.\",\r\n    \"MethodName\": \"ReverseString\",\r\n    \"returnType\":
+    \"string\",\r\n    \"Params\": [\r\n        {\r\n            \"type\": \"string\",\r\n           
+    \"name\": \"inputString\"\r\n        }\r\n    ],\r\n    \"TestCases\": [\r\n       
+    {\r\n            \"desc\": \"Test case with a short string\",\r\n           
+    \"output\": \"olleH\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"Hello\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with a long string\",\r\n            \"output\": \"dlrow olleH\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"Hello world\"\r\n                }\r\n            ]\r\n        },\r\n       
+    {\r\n            \"desc\": \"Test case with an empty string\",\r\n           
+    \"output\": \"\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"string\",\r\n                    \"name\": \"\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with a single character\",\r\n            \"output\": \"a\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"string\",\r\n                   
+    \"name\": \"a\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0

@@ -121,7 +121,7 @@ public class Interface : MonoBehaviour
         
         //match test cases here
 
-        matcher.MatchCases();
+        bool allMatched = matcher.MatchCases();
 
 
         //Debug.Log("User's result is: " + result);

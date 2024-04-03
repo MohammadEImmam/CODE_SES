@@ -49,11 +49,11 @@ public class shopManager : MonoBehaviour
             images[i].sprite = shopItemsSO[i].itemImage;
         }
     }
-    public void purchase(int price)
+    public void purchase(int buttonNumber)
     {
-        if (money >= price)
+        if (money >= shopItemsSO[buttonNumber].price)
         {
-            money = money - price;
+            money = money - shopItemsSO[buttonNumber].price;
             moneyUI.text = "Money: " + money.ToString();
 
             //unlock item for the user

@@ -8,6 +8,8 @@ TagManager:
   - CinemachineTarget
   - IDETrigger
   - taskUI
+  - Desktop
+  - ShopManager
   layers:
   - Default
   - TransparentFX

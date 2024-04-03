@@ -9,7 +9,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: CountVowels
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Count Vowels in a String
+    Desc: Given a string, count the number of vowels (a, e, i, o, u) in it.
+    MethodName: CountVowels
+    returnType: int
+    Params:
+    - type: string
+      name: inputString
+    TestCases:
+    - output: 3
+      args:
+      - type: string
+        name: hello world
+    - output: 0
+      args:
+      - type: string
+        name: xyz
+    - output: 5
+      args:
+      - type: string
+        name: aeiou
+    - output: 0
+      args:
+      - type: string
+        name: 
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static int CountVowels(string inputString)\r\n    {\r\n        int count = 0;\r\n       
+    foreach (char c in inputString)\r\n        {\r\n            if (IsVowel(c))\r\n           
+    {\r\n                count++;\r\n            }\r\n        }\r\n        return
+    count;\r\n    }\r\n\r\n    private static bool IsVowel(char c)\r\n    {\r\n       
+    return \"aeiouAEIOU\".IndexOf(c) != -1;\r\n    }\r\n}\r\n"
+  loadJobFromJson: 
+  loadJob: 0

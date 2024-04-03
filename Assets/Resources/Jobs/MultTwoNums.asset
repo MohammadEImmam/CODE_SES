@@ -9,7 +9,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e869bdb228ff444d8f2540bac19cc02, type: 3}
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
   m_Name: MultTwoNums
   m_EditorClassIdentifier: 
-  jobButtonReal: {fileID: 0}
+  job:
+    Name: Multiply Two Numbers
+    Desc: Given two numbers as input, return the multiplication of them.
+    MethodName: MultTwoNums
+    returnType: int
+    Params:
+    - type: int
+      name: inputA
+    - type: int
+      name: inputB
+    TestCases:
+    - output: 200
+      args:
+      - type: int
+        name: 20
+      - type: int
+        name: 10
+    - output: 49
+      args:
+      - type: int
+        name: 7
+      - type: int
+        name: 7

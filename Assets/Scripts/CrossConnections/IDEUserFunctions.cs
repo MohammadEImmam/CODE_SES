@@ -35,10 +35,23 @@ public class IDE
         {
             return _textObject;
         }
-        GameObject go = GameObject.FindGameObjectWithTag("LogText");
-        _textScroll = go.GetComponentInParent<ScrollRect>();
-        this._textObject = go.GetComponent<TMP_Text>();
-        return this._textObject;
+
+        if (GameObject.FindGameObjectsWithTag("LogText").Length == 0)
+        {
+            return null;
+        }
+
+        try
+        {
+            GameObject go = GameObject.FindGameObjectWithTag("LogText");
+            _textScroll = go.GetComponentInParent<ScrollRect>();
+            this._textObject = go.GetComponent<TMP_Text>();
+            return this._textObject;
+        }
+        catch(UnityException)
+        {
+            return null;
+        }
     }
     void WriteText(string text)
     {
