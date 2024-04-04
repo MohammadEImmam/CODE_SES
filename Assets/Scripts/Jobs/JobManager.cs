@@ -5,6 +5,7 @@ using System.Text.RegularExpressions;
 using CrossConnections;
 using RoslynCSharp;
 using UnityEngine;
+using PointsManager;
 
 namespace CrossConnections
 {
@@ -18,6 +19,8 @@ namespace CrossConnections
         public bool loadJobsFromResources = true;
         public List<JobAsset> createJobFromAssets = new List<JobAsset>();
         public List<ManagedJob> jobs = new List<ManagedJob>();
+
+        public GameObject pointManager;
 
         private void Awake()
         {
@@ -116,14 +119,25 @@ namespace CrossConnections
             var result = caseMatcher.MatchCases();
             if (result)
             {
-                job.status = JobStatus.Finished;
-                Debug.Log("Job Status Changed");
+
                 string jobStatusKey = job.jobObj.Name + "-Status";
                 PlayerPrefs.SetInt(jobStatusKey, 1);
+                //check for job status
+                if (job.status != JobStatus.Finished)
+                {
+                    pointManager.GetComponent<Points>().RunTestCases(job.jobObj.difficultyTreshold,true);
+                    job.status = JobStatus.Finished;
+                    Debug.Log("Job Status Changed");
+                }
             }
             else
             {
-                job.status = JobStatus.Not_Finished;
+                //No need to do this:
+                if (job.status != JobStatus.Finished)
+                {
+                    job.status = JobStatus.Not_Finished;
+                }
+                pointManager.GetComponent<Points>().RunTestCases(job.jobObj.difficultyTreshold,false);
             }
         }
 

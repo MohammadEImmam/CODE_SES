@@ -10,6 +10,7 @@ namespace CrossConnections
         public string Desc;
         public string MethodName;
         public string returnType;
+        public int difficultyTreshold;
         public List<Param> Params;
         public List<TestCase> TestCases;
 
