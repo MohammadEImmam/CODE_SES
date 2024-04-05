@@ -4918,7 +4918,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5126527961139664765, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: MainCamera
       objectReference: {fileID: 0}
     - target: {fileID: 5126527961139664767, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
       propertyPath: orthographic size
@@ -5224,6 +5224,22 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: -3661639628750336703, guid: 7e0223e1d3e1733499accfa5ebffb67e, type: 3}
+    - target: {fileID: 2241225664489590826, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: placeableObjects.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2241225664489590826, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: placeableObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 2694928024336930401, guid: 2fc4f36e7a34faa4f864667151ede10c, type: 3}
+    - target: {fileID: 2241225664489590826, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: placeableObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 2694928024336930401, guid: 7e1e71553b53b244683fb3f82eab1167, type: 3}
+    - target: {fileID: 2241225664489590826, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: placeableObjects.Array.data[2]
+      value: 
+      objectReference: {fileID: 2694928024336930401, guid: 78a459d5ce557fe4b8e1d2ce965865f6, type: 3}
     - target: {fileID: 2257351231873268048, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

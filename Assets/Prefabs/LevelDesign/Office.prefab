@@ -127,6 +127,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6308297113442127728}
+  - component: {fileID: 2241225664489590826}
   m_Layer: 0
   m_Name: Office
   m_TagString: Untagged
@@ -158,6 +159,22 @@ Transform:
   - {fileID: 9222424921239404679}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2241225664489590826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3379796189971787649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acba5ca6ab94c334f8d960304e955132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeableObjectPrefabs:
+  - {fileID: 2694928024336930401, guid: 2fc4f36e7a34faa4f864667151ede10c, type: 3}
+  - {fileID: 2694928024336930401, guid: 7e1e71553b53b244683fb3f82eab1167, type: 3}
+  - {fileID: 2694928024336930401, guid: 78a459d5ce557fe4b8e1d2ce965865f6, type: 3}
 --- !u!1 &8275508452402534199
 GameObject:
   m_ObjectHideFlags: 0
