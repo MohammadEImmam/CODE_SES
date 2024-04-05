@@ -6,11 +6,12 @@ using UnityEngine.UI;
 using Computer;
 using TMPro;
 
-public class NewSoftware : Software
+public class CareerProfile : Software
 {
     private float points = 50;
 
     public Button closeButton;
+    public TMP_Text playerNameUI;
 
     public TMP_Text pointsUI;
     public override void OnStart()
@@ -20,6 +21,11 @@ public class NewSoftware : Software
         {
             points = PlayerPrefs.GetFloat("points");
             pointsUI.text = points.ToString("0.00");
+        }
+
+        if (PlayerPrefs.HasKey("pName"))
+        {
+            playerNameUI.text = PlayerPrefs.GetString("pName");
         }
     }
 

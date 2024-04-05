@@ -93,6 +93,9 @@ namespace Computer
             }
 
             state.files = newFileList;
+
+
+
         }
 
         private void Start()
@@ -101,8 +104,15 @@ namespace Computer
 
         private void OnEnable()
         {
+            Software explorer = Run<Explorer>();
             //explorer should run at startup. otherwise the desktop will not appear
-            Run<Explorer>();
+            if (!(PlayerPrefs.HasKey("pName")))
+            {
+                Debug.Log("Player Profile Not Detected! Start Create Account Software");
+                Run<CreateAccount>();
+                Close(explorer);
+                return;
+            }
         }
 
         private void OnDisable()

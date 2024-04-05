@@ -4884,6 +4884,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8828624572544502926, guid: f039dadc2f78f68439b183ceda1b585f, type: 3}
+      propertyPath: languageTheme
+      value: 
+      objectReference: {fileID: 11400000, guid: 4fd1ce3a61e5631478883e158c51892b, type: 2}
+    - target: {fileID: 8828624572544502926, guid: f039dadc2f78f68439b183ceda1b585f, type: 3}
+      propertyPath: applyLineOffsetFix
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
