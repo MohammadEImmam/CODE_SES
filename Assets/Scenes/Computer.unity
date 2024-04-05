@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45142823, g: 0.5007451, b: 0.5713717, a: 1}
+  m_IndirectSpecularColor: {r: 0.4514286, g: 0.500746, b: 0.5713727, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,7 +535,7 @@ MonoBehaviour:
   createJobFromAssets:
   - {fileID: 11400000, guid: 77f8597221ee7134097de86ba108f2b1, type: 2}
   - {fileID: 11400000, guid: 0f370a6c3d8d7204db8f59c950111792, type: 2}
-  pointManager: {fileID: 0}
+  pointManager: {fileID: 199131846}
 --- !u!4 &100246937
 Transform:
   m_ObjectHideFlags: 0
@@ -762,6 +762,50 @@ ReflectionProbe:
   m_UseOcclusionCulling: 1
   m_Importance: 1
   m_CustomBakedTexture: {fileID: 0}
+--- !u!1 &199131846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 199131848}
+  - component: {fileID: 199131847}
+  m_Layer: 0
+  m_Name: PointManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &199131847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199131846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50bef2983b2da495181299f5f1381498, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &199131848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199131846}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.85062, y: -3.10787, z: 1.3980675}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &214485481
 GameObject:
   m_ObjectHideFlags: 0
@@ -3299,6 +3343,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dd81c96bb15734490f47627c04a4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 0}
+  panel: {fileID: 0}
 --- !u!4 &1510287306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6556307555316582679, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -4923,3 +4969,4 @@ SceneRoots:
   - {fileID: 100246937}
   - {fileID: 2039323760}
   - {fileID: 757894337}
+  - {fileID: 199131848}
