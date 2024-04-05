@@ -10,6 +10,8 @@ TagManager:
   - taskUI
   - Desktop
   - ShopManager
+  - RegenBed
+  - RegenKitchen
   layers:
   - Default
   - TransparentFX
