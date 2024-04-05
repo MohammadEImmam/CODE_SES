@@ -10,6 +10,15 @@ public class Player : MonoBehaviour
     public int Salary { get; set; }
     public List<string> items;
 
+    public float timeCounter = 0;
+    public int regenTimer = 0;
+
+    public HealthBar healthBar;
+    public int playerHealth = 100;
+
+    public HealthBar fatigueBar;
+    public int playerFatigue = 100;
+
     void Start()
     {
         // Initialize item list
@@ -30,6 +39,29 @@ public class Player : MonoBehaviour
         foreach (string item in items)
         {
             Debug.Log(item);
+        }
+
+        //initalize player health and fatigue levels
+        healthBar.SetHealth(playerHealth);
+        fatigueBar.SetHealth(playerFatigue);
+    }
+
+    void Update()
+    {
+        //reduce player health and fatigue level by 1 percent every 30 sceonds
+        timeCounter += Time.deltaTime;
+
+        //set for 1 sec for testing purpose
+        if(timeCounter > 1)
+        {
+            ReduceStats();
+            timeCounter = 0;
+        }
+
+        //if either player stats is <= 0 then game over 
+        if(playerHealth <= 0 || playerFatigue <= 0)
+        {
+            Debug.Log("Gameover");
         }
     }
 
@@ -100,5 +132,43 @@ public class Player : MonoBehaviour
             items.Add("Dark Theme");
             items.Add("Midnight Theme");
         }
+    }
+
+    //lower player stats by 1 percent
+    public void ReduceStats()
+    {
+        playerHealth -= 1;
+        playerFatigue -= 1;
+
+        healthBar.SetHealth(playerHealth);
+        fatigueBar.SetHealth(playerFatigue);
+    } 
+
+    
+    // check if player is on bed or in kitchen for regen
+    void OnTriggerStay(Collider other)
+    {
+        //regen stats every 2 seconds
+        regenTimer += 1;
+
+        //for fatigue regen
+        if (other.gameObject.tag == "RegenBed" && playerFatigue < 100 && regenTimer%50 == 0)
+        {
+            playerFatigue += 3;
+            fatigueBar.SetHealth(playerFatigue);
+        }
+
+        //for health (hunger) regen
+        if (other.gameObject.tag == "RegenKitchen" && playerHealth < 100 && regenTimer%50 == 0)
+        {
+            playerHealth += 3;
+            healthBar.SetHealth(playerHealth);
+        }
+    }
+
+    //reset regen timer when exit bed or kitchen
+    void OnTriggerExit(Collider other)
+    {
+        regenTimer = 0;
     }
 }
