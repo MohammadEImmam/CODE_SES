@@ -16,7 +16,6 @@ public class shopManager : MonoBehaviour
     public Button[] buttons;
     public Image[] images;
 
-
     public bool shouldUnloadScene { get; set; }
 
     public void Start()
