@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4514286, g: 0.500746, b: 0.5713727, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142823, g: 0.5007451, b: 0.5713717, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -535,6 +535,7 @@ MonoBehaviour:
   createJobFromAssets:
   - {fileID: 11400000, guid: 77f8597221ee7134097de86ba108f2b1, type: 2}
   - {fileID: 11400000, guid: 0f370a6c3d8d7204db8f59c950111792, type: 2}
+  pointManager: {fileID: 0}
 --- !u!4 &100246937
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1221,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509235203}
   m_CullTransparentMesh: 1
+--- !u!1 &517052502 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3379796189971787649, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+  m_PrefabInstance: {fileID: 4713091229819569288}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &517052504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517052502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acba5ca6ab94c334f8d960304e955132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  placeableObjects:
+  - {fileID: 2694928024336930401, guid: 2fc4f36e7a34faa4f864667151ede10c, type: 3}
+  - {fileID: 2694928024336930401, guid: 7e1e71553b53b244683fb3f82eab1167, type: 3}
+  - {fileID: 2694928024336930401, guid: 78a459d5ce557fe4b8e1d2ce965865f6, type: 3}
 --- !u!1 &565883578
 GameObject:
   m_ObjectHideFlags: 0
@@ -2528,6 +2550,7 @@ MonoBehaviour:
     Desc: 
     MethodName: 
     returnType: 
+    difficultyTreshold: 0
     Params: []
     TestCases: []
 --- !u!1001 &1227878154
@@ -3276,8 +3299,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9dd81c96bb15734490f47627c04a4d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1497463689}
-  panel: {fileID: 1486064446}
 --- !u!4 &1510287306 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6556307555316582679, guid: 035bf1ba97d19214580cfe6f5a29fdc3, type: 3}
@@ -4877,7 +4898,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3379796189971787649, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 517052504}
   m_SourcePrefab: {fileID: 100100000, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
