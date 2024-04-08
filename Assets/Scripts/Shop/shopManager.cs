@@ -38,7 +38,7 @@ public class shopManager : MonoBehaviour
         money--;
         moneyUI.text = "Money: " + money.ToString();
     }
-    public void loadItems()
+     public void loadItems()
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
         {
@@ -47,7 +47,7 @@ public class shopManager : MonoBehaviour
             panels[i].pricetxt.text = shopItemsSO[i].price.ToString();
             images[i].sprite = shopItemsSO[i].itemImage;
         }
-    }
+    } 
     public void purchase(int buttonNumber)
     {
         if (money >= shopItemsSO[buttonNumber].price)

@@ -44,7 +44,7 @@ public class placeableObject : MonoBehaviour
                         Destroy(currentObject);
 
                     currentObject = Instantiate(placeableObjects[i]);
-                    currentObject.GetComponent<BoxCollider>().enabled = false;
+                    //currentObject.GetComponent<BoxCollider>().enabled = false;
                     prefabIndex = i;
                 }
                 break;
@@ -60,10 +60,10 @@ public class placeableObject : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit)){
             Vector3 hitPoint = hit.point;
-                Vector3 hitNormal = hit.normal;
+            Vector3 hitNormal = hit.normal;
 
-                // Adjust object position to align with the hit point and normal
-                currentObject.transform.position = hitPoint + hitNormal * (currentObject.transform.localScale.y / 2);
+            // Adjust object position to align with the hit point and normal
+            currentObject.transform.position = hitPoint; //+ hitNormal * (currentObject.transform.localScale.y / 2);
             currentObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
         }
     }
