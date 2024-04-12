@@ -140,6 +140,17 @@ public class Player : MonoBehaviour
         playerHealth -= 1;
         playerFatigue -= 1;
 
+        //health cant be negative so set to 0
+        if(playerHealth < 0)
+        {
+            playerHealth = 0;
+        }
+
+        if(playerFatigue < 0)
+        {
+            playerFatigue = 0;
+        }
+
         healthBar.SetHealth(playerHealth);
         fatigueBar.SetHealth(playerFatigue);
     } 
