@@ -15,12 +15,21 @@ public class shopManager : MonoBehaviour
     public shopTemplate[] panels;
     public Button[] buttons;
     public Image[] images;
+    public static bool[] static_hasBeenPurchased;
+    public bool[] hasBeenPurchased;
+
 
     public bool shouldUnloadScene { get; set; }
 
     public void Start()
     {
         loadItems();
+
+        // INITIALIZE PLACEABLE OBJECTS PURCHASE ARRAY
+        // CHANGE SIZE IF MORE OBJECTS ARE ADDED
+        if(static_hasBeenPurchased == null)
+            static_hasBeenPurchased = new bool[panels.Length - 4];
+
         money = PlayerPrefs.GetInt("Money");
         moneyUI.text = "Money: " + money;
     }
@@ -30,7 +39,7 @@ public class shopManager : MonoBehaviour
     }
     public void increaseCoins()
     {
-        money++;
+        money+=100;
         moneyUI.text = "Money: " + money.ToString();
     }
     public void purchaseItem()
@@ -55,7 +64,10 @@ public class shopManager : MonoBehaviour
             money = money - shopItemsSO[buttonNumber].price;
             moneyUI.text = "Money: " + money.ToString();
 
-            //unlock item for the user
+            //allow player to place object
+            if(buttonNumber > 3) {
+                static_hasBeenPurchased[buttonNumber-4] = true;
+            }
         }
 
         // remove money
@@ -67,5 +79,9 @@ public class shopManager : MonoBehaviour
     {
         gameObject.SetActive(false);
         onExit?.Invoke();
+    }
+
+    public static bool isPurchased(int index) {
+        return static_hasBeenPurchased[index];
     }
 }

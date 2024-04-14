@@ -26,6 +26,20 @@ public class placeableObject : MonoBehaviour
                 MouseWheeleRotate();
                 Clicked();
             }
+            else {
+                Camera cam = GameObject.Find("MainCamera").GetComponent<Camera>();
+                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit;
+                bool deleteableObject;
+
+                if(Physics.Raycast(ray, out hit)) {
+                    if(Input.GetMouseButtonDown(1)) {
+                        deleteableObject = canPlayerDelete(hit);
+                        if(deleteableObject)
+                            Destroy(hit.transform.gameObject);
+                    }
+                }
+            }
         
     }
 
@@ -43,9 +57,11 @@ public class placeableObject : MonoBehaviour
                     if(currentObject != null)
                         Destroy(currentObject);
 
-                    currentObject = Instantiate(placeableObjects[i]);
-                    //currentObject.GetComponent<BoxCollider>().enabled = false;
-                    prefabIndex = i;
+                    if(shopManager.isPurchased(i)) {
+                        currentObject = Instantiate(placeableObjects[i]);
+                        //currentObject.GetComponent<BoxCollider>().enabled = false;
+                        prefabIndex = i;
+                    }
                 }
                 break;
             }
@@ -77,5 +93,14 @@ public class placeableObject : MonoBehaviour
         if(Input.GetMouseButtonDown(0))
             currentObject = null;
     } 
+
+    private bool canPlayerDelete(RaycastHit hit) {
+        GameObject obj = hit.transform.gameObject;
+
+        if(obj.name.Contains("Floor"))
+            return false;
+
+        return true;
+    }
 }
 
