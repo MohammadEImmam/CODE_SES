@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd0ea6e05f641444a9114873fed6ebc, type: 3}
   m_Name: Purple IDE
   m_EditorClassIdentifier: 
-  name: Snake Plant
-  desc: Make the office look nicer!
-  price: 55
-  itemImage: {fileID: 21300000, guid: ee9ccebd7b7cf1202b06756cb49abfa6, type: 3}
+  name: Purple IDE
+  desc: Very Purple
+  price: 15
+  itemImage: {fileID: 21300000, guid: 5502f59543dcb9942802c3fe5c286836, type: 3}
