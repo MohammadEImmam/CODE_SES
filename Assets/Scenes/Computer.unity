@@ -846,7 +846,7 @@ MonoBehaviour:
   createJobFromAssets:
   - {fileID: 11400000, guid: 77f8597221ee7134097de86ba108f2b1, type: 2}
   - {fileID: 11400000, guid: 0f370a6c3d8d7204db8f59c950111792, type: 2}
-  pointManager: {fileID: 199131846}
+  GameManager: {fileID: 0}
 --- !u!4 &100246937
 Transform:
   m_ObjectHideFlags: 0
@@ -2702,7 +2702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &641417380
 MonoBehaviour:
   m_ObjectHideFlags: 0
