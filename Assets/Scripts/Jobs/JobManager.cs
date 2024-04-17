@@ -20,7 +20,8 @@ namespace CrossConnections
         public List<JobAsset> createJobFromAssets = new List<JobAsset>();
         public List<ManagedJob> jobs = new List<ManagedJob>();
 
-        public GameObject pointManager;
+        public GameObject GameManager;
+        
 
         private void Awake()
         {
@@ -112,11 +113,15 @@ namespace CrossConnections
                     ValidateJob(job, job.associatedFile.data);
             }
         }
+        
+
+
 
         public void ValidateJob(ManagedJob job, ScriptAssembly asm)
         {
             var caseMatcher = new CaseMatcher(asm.MainType, job.jobObj);
             var result = caseMatcher.MatchCases();
+            var Manager = GameManager.gameObject.GetComponent<GameManager>();
             if (result)
             {
 
@@ -125,9 +130,12 @@ namespace CrossConnections
                 //check for job status
                 if (job.status != JobStatus.Finished)
                 {
-                    pointManager.GetComponent<Points>().RunTestCases(job.jobObj.difficultyTreshold,true);
                     job.status = JobStatus.Finished;
                     Debug.Log("Job Status Changed");
+                    
+                    
+                    // Inform Game Manager of job completion to run checks:
+                    Manager.TaskCompleted(job.jobObj.difficultyTreshold);
                 }
             }
             else
@@ -137,7 +145,9 @@ namespace CrossConnections
                 {
                     job.status = JobStatus.Not_Finished;
                 }
-                pointManager.GetComponent<Points>().RunTestCases(job.jobObj.difficultyTreshold,false);
+                
+                //Inform Game Manager of job fail
+                Manager.TaskFailed(job.jobObj.difficultyTreshold);
             }
         }
 
