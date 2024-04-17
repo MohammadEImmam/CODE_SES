@@ -8,9 +8,10 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Toggle inventory UI
         if(Input.GetKeyDown(KeyCode.I)) {
-            print("I KEY PRESSED");
             canvas.gameObject.SetActive(!canvas.gameObject.activeInHierarchy);
         }
+
     }
 }

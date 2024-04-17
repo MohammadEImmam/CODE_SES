@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System;
 
 public static class inventoryManager {
+	// manages player access to items. get/set are called on item purchase from shop
 	public static bool[] isItemAvailable = new bool[4];
 
 	public static bool getItem(int index) {

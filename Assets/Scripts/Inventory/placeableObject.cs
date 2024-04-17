@@ -15,30 +15,33 @@ public class placeableObject : MonoBehaviour
     private int prefabIndex = -1;
     GameObject shopUI;
 
-    // Update is called once per frame
     void Update()
     {
-            newPlaceableObject();
+        newPlaceableObject();
 
-            // if the current object is null that means the place button
-            // was clicked twice and the game object is destroyed
-            if(currentObject != null) {
-                MoveObjectWithMouse();
-                MouseWheeleRotate();
-                Clicked();
-            }
-            else {
-                if(GameObject.Find("MainCamera") != null) {
-                Camera cam = GameObject.Find("MainCamera").GetComponent<Camera>();
-                Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-                RaycastHit hit;
-                bool deleteableObject;
+        // if the current object is null that means the place button
+        // was clicked twice and the game object is destroyed
+        if(currentObject != null) {
+            MoveObjectWithMouse();
+            MouseWheeleRotate();
+            Clicked();
+        }
 
-                if(Physics.Raycast(ray, out hit)) {
-                    if(Input.GetMouseButtonDown(1)) {
-                        deleteableObject = canPlayerDelete(hit);
-                        if(deleteableObject)
-                            Destroy(hit.transform.gameObject);
+        // deleting objects
+        else {
+            if(GameObject.Find("MainCamera") != null) {
+            Camera cam = GameObject.Find("MainCamera").GetComponent<Camera>();
+            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            bool deleteableObject;
+
+            // send raycast to mouse position in scene
+            if(Physics.Raycast(ray, out hit)) {
+                if(Input.GetMouseButtonDown(1)) {
+                    
+                    deleteableObject = canPlayerDelete(hit);
+                    if(deleteableObject)                            
+                        Destroy(hit.transform.gameObject);
                     }
                 }
                 }
@@ -46,6 +49,8 @@ public class placeableObject : MonoBehaviour
         
     }
 
+    /* Checks to see if key pressed matches with a prefab. Then ckecks to see if the
+        prefab has been purchased. If both are true then the prefab is set to current Object*/
     private void newPlaceableObject() {
         for(int i = 0; i < placeableObjects.Length; i++) {
 
@@ -62,7 +67,6 @@ public class placeableObject : MonoBehaviour
 
                     if(inventoryManager.getItem(i)) {
                         currentObject = Instantiate(placeableObjects[i]);
-                        //currentObject.GetComponent<BoxCollider>().enabled = false;
                         prefabIndex = i;
                     }
                 }
@@ -81,8 +85,8 @@ public class placeableObject : MonoBehaviour
             Vector3 hitPoint = hit.point;
             Vector3 hitNormal = hit.normal;
 
-            // Adjust object position to align with the hit point and normal
-            currentObject.transform.position = hitPoint; //+ hitNormal * (currentObject.transform.localScale.y / 2);
+            // Adjust object position to align with the hit point and orientation
+            currentObject.transform.position = hitPoint;
             currentObject.transform.rotation = Quaternion.FromToRotation(Vector3.up, hitNormal);
         }
     }
@@ -97,6 +101,7 @@ public class placeableObject : MonoBehaviour
             currentObject = null;
     } 
 
+    /* Function limits what objects can be deleted by players */
     private bool canPlayerDelete(RaycastHit hit) {
         GameObject obj = hit.transform.gameObject;
 

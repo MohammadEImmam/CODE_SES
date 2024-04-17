@@ -15,33 +15,25 @@ public class shopManager : MonoBehaviour
     public shopTemplate[] panels;
     public Button[] buttons;
     public Image[] images;
-    public static bool[] static_hasBeenPurchased;
-    public bool[] hasBeenPurchased;
 
 
     public bool shouldUnloadScene { get; set; }
 
     public void Start()
     {
+        // loads in available scriptable objects with their respective info
         loadItems();
-        loadPurchases();
+   
         money = PlayerPrefs.GetInt("Money");
         moneyUI.text = "Money: " + money;
     }
-    public void Update()
-    {
 
-    }
     public void increaseCoins()
     {
         money+=100;
         moneyUI.text = "Money: " + money.ToString();
     }
-    public void purchaseItem()
-    {
-        money--;
-        moneyUI.text = "Money: " + money.ToString();
-    }
+
      public void loadItems()
     {
         for (int i = 0; i < shopItemsSO.Length; i++)
@@ -52,12 +44,7 @@ public class shopManager : MonoBehaviour
             images[i].sprite = shopItemsSO[i].itemImage;
         }
     } 
-    public void loadPurchases() {
-        // INITIALIZE PLACEABLE OBJECTS PURCHASE ARRAY
-        // CHANGE SIZE IF MORE OBJECTS ARE ADDED
-        if(static_hasBeenPurchased == null)
-            static_hasBeenPurchased = new bool[panels.Length - 4];
-    }
+
     public void purchase(int buttonNumber)
     {
         if (money >= shopItemsSO[buttonNumber].price)
@@ -65,13 +52,13 @@ public class shopManager : MonoBehaviour
             money = money - shopItemsSO[buttonNumber].price;
             moneyUI.text = "Money: " + money.ToString();
 
-            //allow player to place object
+            //unlock item for player
             if(buttonNumber > 3) {
                 inventoryManager.setItem(buttonNumber-4, true);
             }
         }
 
-        // remove money
+        // update money
         PlayerPrefs.SetInt("Money", money);
 
     }
@@ -82,7 +69,4 @@ public class shopManager : MonoBehaviour
         onExit?.Invoke();
     }
 
-    public static bool isPurchased(int index) {
-        return static_hasBeenPurchased[index];
-    }
 }
