@@ -24,12 +24,7 @@ public class shopManager : MonoBehaviour
     public void Start()
     {
         loadItems();
-
-        // INITIALIZE PLACEABLE OBJECTS PURCHASE ARRAY
-        // CHANGE SIZE IF MORE OBJECTS ARE ADDED
-        if(static_hasBeenPurchased == null)
-            static_hasBeenPurchased = new bool[panels.Length - 4];
-
+        loadPurchases();
         money = PlayerPrefs.GetInt("Money");
         moneyUI.text = "Money: " + money;
     }
@@ -57,6 +52,12 @@ public class shopManager : MonoBehaviour
             images[i].sprite = shopItemsSO[i].itemImage;
         }
     } 
+    public void loadPurchases() {
+        // INITIALIZE PLACEABLE OBJECTS PURCHASE ARRAY
+        // CHANGE SIZE IF MORE OBJECTS ARE ADDED
+        if(static_hasBeenPurchased == null)
+            static_hasBeenPurchased = new bool[panels.Length - 4];
+    }
     public void purchase(int buttonNumber)
     {
         if (money >= shopItemsSO[buttonNumber].price)
@@ -66,7 +67,7 @@ public class shopManager : MonoBehaviour
 
             //allow player to place object
             if(buttonNumber > 3) {
-                static_hasBeenPurchased[buttonNumber-4] = true;
+                inventoryManager.setItem(buttonNumber-4, true);
             }
         }
 

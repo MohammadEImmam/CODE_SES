@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 // Instantiate.GameObject
@@ -12,7 +13,7 @@ public class placeableObject : MonoBehaviour
     private GameObject currentObject;
     private float mouseRotation;
     private int prefabIndex = -1;
-
+    GameObject shopUI;
 
     // Update is called once per frame
     void Update()
@@ -27,6 +28,7 @@ public class placeableObject : MonoBehaviour
                 Clicked();
             }
             else {
+                if(GameObject.Find("MainCamera") != null) {
                 Camera cam = GameObject.Find("MainCamera").GetComponent<Camera>();
                 Ray ray = cam.ScreenPointToRay(Input.mousePosition);
                 RaycastHit hit;
@@ -38,6 +40,7 @@ public class placeableObject : MonoBehaviour
                         if(deleteableObject)
                             Destroy(hit.transform.gameObject);
                     }
+                }
                 }
             }
         
@@ -57,7 +60,7 @@ public class placeableObject : MonoBehaviour
                     if(currentObject != null)
                         Destroy(currentObject);
 
-                    if(shopManager.isPurchased(i)) {
+                    if(inventoryManager.getItem(i)) {
                         currentObject = Instantiate(placeableObjects[i]);
                         //currentObject.GetComponent<BoxCollider>().enabled = false;
                         prefabIndex = i;
