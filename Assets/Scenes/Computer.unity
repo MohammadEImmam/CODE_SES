@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.451428, g: 0.5007451, b: 0.57137185, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142877, g: 0.50074625, b: 0.571373, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3465,12 +3465,12 @@ MonoBehaviour:
   m_margin: {x: 3.1619363, y: -0.034653664, z: 6.5783734, w: 0.38763094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 754733457}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 754733457}
+  m_maskType: 0
 --- !u!23 &754733457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5679,12 +5679,12 @@ MonoBehaviour:
   m_margin: {x: 3.1619363, y: -0.23011923, z: 6.5783734, w: 0.38763094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 0
-  m_renderer: {fileID: 1216016215}
-  m_maskType: 0
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+  m_hasFontAssetChanged: 0
+  m_renderer: {fileID: 1216016215}
+  m_maskType: 0
 --- !u!23 &1216016215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10435,6 +10435,22 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1207385602123821945, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: m_Elasticity
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207385602123821945, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: m_Horizontal
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207385602123821945, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: m_MovementType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207385602123821945, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1294397530370450760, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
       propertyPath: m_Material
       value: 
@@ -10454,6 +10470,10 @@ PrefabInstance:
     - target: {fileID: 4608342845708272994, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
       propertyPath: m_TagString
       value: RegenBed
+      objectReference: {fileID: 0}
+    - target: {fileID: 5908595415553077344, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
+      propertyPath: m_Value
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6308297113442127728, guid: ebdd85a7559162a448813e78575cfa21, type: 3}
       propertyPath: m_LocalPosition.x
