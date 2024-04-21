@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
+  m_Name: FindMissingNumber
+  m_EditorClassIdentifier: 
+  job:
+    Name: Find Missing Number
+    Desc: Given an array containing n distinct numbers taken from 0, 1, 2, ..., n, find the one that is missing from the array.
+    MethodName: FindMissingNumber
+    returnType: int
+    Params:
+    - type: int[]
+      name: nums
+    TestCases:
+    - output: 2
+      args:
+      - type: int[]
+        name: [3, 0, 1]
+    - output: 8
+      args:
+      - type: int[]
+        name: [9, 6, 4, 2, 3, 5, 7, 0, 1]
+  solution: "public static class Solution\r\n{\r\n    public static int FindMissingNumber(int[]
+    nums)\r\n    {\r\n        int n = nums.Length;\r\n        int expectedSum = n
+    * (n + 1) / 2;\r\n        int actualSum = 0;\r\n\r\n        foreach (int num
+    in nums)\r\n        {\r\n            actualSum += num;\r\n        }\r\n\r\n       
+    return expectedSum - actualSum;\r\n    }\r\n}\r\n"
+  loadJobFromJson: 
+  loadJob: 0

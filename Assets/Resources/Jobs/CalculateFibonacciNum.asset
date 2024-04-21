@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
+  m_Name: CalculateFibonacciNum
+  m_EditorClassIdentifier: 
+  job:
+    Name: Calculate Fibonacci
+    Desc: Given an integer n, calculate the nth Fibonacci number.
+    MethodName: CalculateFibonacci
+    returnType: int
+    Params:
+    - type: int
+      name: n
+    TestCases:
+    - output: 21
+      args:
+      - type: int
+        name: 8
+    - output: 144
+      args:
+      - type: int
+        name: 12
+    - output: 1
+      args:
+      - type: int
+        name: 1
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static int CalculateFibonacci(int n)\r\n    {\r\n        if (n <= 1)\r\n       
+    {\r\n            return n;\r\n        }\r\n\r\n        int prev = 0;\r\n      
+    int current = 1;\r\n        int result = 0;\r\n        for (int i = 2; i <=
+    n; i++)\r\n        {\r\n            result = prev + current;\r\n           
+    prev = current;\r\n            current = result;\r\n        }\r\n        return
+    result;\r\n    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Calculate Fibonacci\",\r\n    \"Desc\":
+    \"Given an integer n, calculate the nth Fibonacci number.\",\r\n    \"MethodName\":
+    \"CalculateFibonacci\",\r\n    \"returnType\": \"int\",\r\n    \"Params\":
+    [\r\n        {\r\n            \"type\": \"int\",\r\n            \"name\":
+    \"n\"\r\n        }\r\n    ],\r\n    \"TestCases\": [\r\n        {\r\n        
+    \"desc\": \"Test case with small n\",\r\n            \"output\": \"21\",\r\n       
+    \"args\": [\r\n                {\r\n                    \"type\": \"int\",\r\n                   
+    \"name\": \"8\"\r\n                }\r\n            ]\r\n        },\r\n      
+    {\r\n            \"desc\": \"Test case with larger n\",\r\n            \"output\":
+    \"144\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"int\",\r\n                    \"name\": \"12\"\r\n               
+    }\r\n            ]\r\n        },\r\n        {\r\n            \"desc\": \"Test
+    case with n = 1\",\r\n            \"output\": \"1\",\r\n            \"args\":
+    [\r\n                {\r\n                    \"type\": \"int\",\r\n                   
+    \"name\": \"1\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0

@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb89f44276b41f049b8c147c140e3496, type: 3}
+  m_Name: CalculatePower
+  m_EditorClassIdentifier: 
+  job:
+    Name: Calculate Power
+    Desc: Given two integers x and n, calculate x raised to the power n.
+    MethodName: CalculatePower
+    returnType: int
+    Params:
+    - type: int
+      name: x
+    - type: int
+      name: n
+    TestCases:
+    - output: 16
+      args:
+      - type: int
+        name: 2
+      - type: int
+        name: 4
+    - output: 1
+      args:
+      - type: int
+        name: 5
+      - type: int
+        name: 0
+    - output: 27
+      args:
+      - type: int
+        name: 3
+      - type: int
+        name: 3
+  solution: "using System;\r\n\r\npublic static class Solution\r\n{\r\n    public
+    static int CalculatePower(int x, int n)\r\n    {\r\n        return (int)Math.Pow(x,
+    n);\r\n    }\r\n}\r\n"
+  loadJobFromJson: "{\r\n    \"Name\": \"Calculate Power\",\r\n    \"Desc\": \"Given
+    two integers x and n, calculate x raised to the power n.\",\r\n    \"MethodName\":
+    \"CalculatePower\",\r\n    \"returnType\": \"int\",\r\n    \"Params\": [\r\n       
+    {\r\n            \"type\": \"int\",\r\n            \"name\": \"x\"\r\n       
+    },\r\n        {\r\n            \"type\": \"int\",\r\n            \"name\":
+    \"n\"\r\n        }\r\n    ],\r\n    \"TestCases\": [\r\n        {\r\n           
+    \"desc\": \"Test case with positive power\",\r\n            \"output\": \"16\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"int\",\r\n                   
+    \"name\": \"2\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"int\",\r\n                    \"name\": \"4\"\r\n                }\r\n           
+    ]\r\n        },\r\n        {\r\n            \"desc\": \"Test case with zero power\",\r\n           
+    \"output\": \"1\",\r\n            \"args\": [\r\n                {\r\n                   
+    \"type\": \"int\",\r\n                    \"name\": \"5\"\r\n                },\r\n       
+    {\r\n                    \"type\": \"int\",\r\n                    \"name\":
+    \"0\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n           
+    \"desc\": \"Test case with cube\",\r\n            \"output\": \"27\",\r\n           
+    \"args\": [\r\n                {\r\n                    \"type\": \"int\",\r\n                   
+    \"name\": \"3\"\r\n                },\r\n                {\r\n                   
+    \"type\": \"int\",\r\n                    \"name\": \"3\"\r\n                }\r\n           
+    ]\r\n        }\r\n    ]\r\n}\r\n"
+  loadJob: 0
