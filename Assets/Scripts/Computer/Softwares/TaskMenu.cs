@@ -55,6 +55,7 @@ namespace Computer
         public void Refresh()
         {
             Debug.Log("Refresh Called");
+            JobManager.instance.Populate();
             list.Resize(JobManager.instance.jobs.Count);
             list.Iterate(JobManager.instance.jobs.Count, (x, i) =>
             {

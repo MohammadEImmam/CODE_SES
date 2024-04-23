@@ -6,6 +6,7 @@ using CrossConnections;
 using RoslynCSharp;
 using UnityEngine;
 using PointsManager;
+using TMPro;
 
 namespace CrossConnections
 {
@@ -20,7 +21,7 @@ namespace CrossConnections
         public List<JobAsset> createJobFromAssets = new List<JobAsset>();
         public List<ManagedJob> jobs = new List<ManagedJob>();
 
-        public GameObject GameManager;
+        //public GameObject GameManager;
         
 
         private void Awake()
@@ -28,35 +29,44 @@ namespace CrossConnections
             instance = this;
         }
 
-        public void CreateJobTask()
+        public void Populate()
         {
-            if (loadJobsFromResources)
+            int verifyJob = PlayerPrefs.GetInt("JobFound");
+            if (verifyJob == 1)
             {
-                createJobFromAssets = Resources.LoadAll<JobAsset>("Jobs").ToList();
-            }
-            foreach (var x in createJobFromAssets)
-            {
-                var cloned = Instantiate(x);
-                jobs.Add(
-                    new ManagedJob(cloned.job)
-                    {
-                        solutionSourceCode = cloned.solution
-                    });
-                Destroy(cloned);
-            }
-
-            foreach (var job in jobs)
-            {
-                MakeJobFinalParams(job.jobObj);
-                string jobStatusKey = job.jobObj.Name + "-Status";
-                if(PlayerPrefs.HasKey(jobStatusKey))
+                if (loadJobsFromResources)
                 {
-                    if (PlayerPrefs.GetInt(jobStatusKey) == 1)
+                    createJobFromAssets = Resources.LoadAll<JobAsset>("Jobs").ToList();
+                }
+                foreach (var x in createJobFromAssets)
+                {
+                    var cloned = Instantiate(x);
+                    jobs.Add(
+                        new ManagedJob(cloned.job)
+                        {
+                            solutionSourceCode = cloned.solution
+                        });
+                    Destroy(cloned);
+                }
+
+                foreach (var job in jobs)
+                {
+                    MakeJobFinalParams(job.jobObj);
+                    string jobStatusKey = job.jobObj.Name + "-Status";
+                    if(PlayerPrefs.HasKey(jobStatusKey))
                     {
-                        job.status = JobStatus.Finished;
+                        if (PlayerPrefs.GetInt(jobStatusKey) == 1)
+                        {
+                            job.status = JobStatus.Finished;
+                        }
                     }
                 }
             }
+        }
+
+        public void Start()
+        {
+            Populate();
         }
 
         void MakeJobFinalParams(Job job)
@@ -121,7 +131,8 @@ namespace CrossConnections
         {
             var caseMatcher = new CaseMatcher(asm.MainType, job.jobObj);
             var result = caseMatcher.MatchCases();
-            var Manager = GameManager.gameObject.GetComponent<GameManager>();
+            //var Manager = GameManager.gameObject.GetComponent<GameManager>();
+            var Manager = GameObject.FindWithTag("GameManager").gameObject.GetComponent<GameManager>();
             if (result)
             {
 

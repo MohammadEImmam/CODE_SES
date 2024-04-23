@@ -12,6 +12,9 @@ TagManager:
   - ShopManager
   - RegenBed
   - RegenKitchen
+  - Door
+  - NoCareerMessage
+  - GameManager
   layers:
   - Default
   - TransparentFX
