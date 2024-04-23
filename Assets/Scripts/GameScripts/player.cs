@@ -51,8 +51,8 @@ public class Player : MonoBehaviour
         //reduce player health and fatigue level by 1 percent every 30 sceonds
         timeCounter += Time.deltaTime;
 
-        //set for 1 sec for testing purpose
-        if(timeCounter > 1)
+        //set for 30 sec
+        if(timeCounter > 30)
         {
             ReduceStats();
             timeCounter = 0;
