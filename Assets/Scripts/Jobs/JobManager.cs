@@ -28,7 +28,7 @@ namespace CrossConnections
             instance = this;
         }
 
-        private void Start()
+        public void CreateJobTask()
         {
             if (loadJobsFromResources)
             {
