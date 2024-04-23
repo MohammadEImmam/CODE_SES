@@ -10128,14 +10128,15 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "\t\t\t\t\tInstructions:\n\nPlayer Movement: W-Forward, S-Backward, A-Left,
-    D-Right.\n\nTo interact with objects, press E.\n\nThe health bar and fatigue
-    bar will decay over time. To regain them, go to the corresponding areas and touch
-    the corresponding objects (the bed or the kitchen). If either bar reaches 0,
-    the game is over.\n\nTo apply for a job, go to the computer and open the job
-    search.\n\nDifferent jobs will have different levels of difficulty and rewards.\n\nTasks
-    will be assigned daily and can be completed on the computer.\n\nFor each completed
-    task, money will be rewarded, but if you fail too many tasks, you will be fired.\n\nMoney
-    can be spent in the shop to purchase upgrades.\_"
+    D-Right.\n\nTo interact with objects, press E.\n\nPress I to view inventory.
+    Once items are purchased they may be placed around the room.\n\nThe health bar
+    and fatigue bar will decay over time. To regain them, go to the corresponding
+    areas and touch the corresponding objects (the bed or the kitchen). If either
+    bar reaches 0, the game is over.\n\nTo apply for a job, go to the computer and
+    open the job search.\n\nDifferent jobs will have different levels of difficulty
+    and rewards.\n\nTasks will be assigned daily and can be completed on the computer.\n\nFor
+    each completed task, money will be rewarded, but if you fail too many tasks,
+    you will be fired.\n\nMoney can be spent in the shop to purchase upgrades.\_"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
