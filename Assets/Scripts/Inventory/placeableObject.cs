@@ -14,6 +14,7 @@ public class placeableObject : MonoBehaviour
     private float mouseRotation;
     private int prefabIndex = -1;
     GameObject shopUI;
+    Collider collider;
 
     void Update()
     {
@@ -22,6 +23,7 @@ public class placeableObject : MonoBehaviour
         // if the current object is null that means the place button
         // was clicked twice and the game object is destroyed
         if(currentObject != null) {
+            Destroy(currentObject.GetComponent<BoxCollider>());
             MoveObjectWithMouse();
             MouseWheeleRotate();
             Clicked();
@@ -97,8 +99,11 @@ public class placeableObject : MonoBehaviour
     }
 
     private void Clicked(){
-        if(Input.GetMouseButtonDown(0))
+        if(Input.GetMouseButtonDown(0)) {
+            currentObject.AddComponent<BoxCollider>();
+            currentObject.layer = 0;
             currentObject = null;
+        }
     } 
 
     /* Function limits what objects can be deleted by players */

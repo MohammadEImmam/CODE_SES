@@ -2237,7 +2237,10 @@ MonoBehaviour:
   - {fileID: 333427986}
   - {fileID: 729532555}
   - {fileID: 602251223}
-  hasBeenPurchased: 00000000
+  themes:
+  - {fileID: 11400000, guid: ada2fe74650ddb042b396e9533b1b674, type: 2}
+  - {fileID: 11400000, guid: cc00b7a428afd6a4bb470014b4f75320, type: 2}
+  - {fileID: 11400000, guid: 112ff7dfadfdb9f4783b8a8ba0c83394, type: 2}
 --- !u!1001 &1618524355
 PrefabInstance:
   m_ObjectHideFlags: 0

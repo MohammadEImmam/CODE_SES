@@ -52,7 +52,7 @@ namespace InGameCodeEditor
         
         [Header("Themes")]
         [SerializeField]
-        private CodeEditorTheme editorTheme = null;
+        public CodeEditorTheme editorTheme = null;
         [SerializeField]
         private CodeLanguageTheme languageTheme = null;
 
