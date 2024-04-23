@@ -32,7 +32,7 @@ public class CreateJobButton : MonoBehaviour
         for(int i = 0; i < jobArray.Count; i++)
         {
             //store the all the job data into the job button
-            jobButton.createJButton(jobArray[i].jobTitle, jobArray[i].jobSalary, jobArray[i].jobDiff, jobArray[i].jobDescription);
+            jobButton.createJButton(jobArray[i].apply, jobArray[i].jobTitle, jobArray[i].jobSalary, jobArray[i].jobDiff, jobArray[i].jobDescription);
 
             //create the list of jobs (clones) each with its own data
             g = Instantiate (jobBtnClone, transform);

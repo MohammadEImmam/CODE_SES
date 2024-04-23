@@ -6,6 +6,7 @@ using TMPro;
 public class JobButton : MonoBehaviour
 {
     //job button data
+    public string apply;
     public string jobTitle;
     public int jobSalary;
     public int jobDiff;
@@ -17,10 +18,12 @@ public class JobButton : MonoBehaviour
     public TextMeshProUGUI jobDescSalary;
     public TextMeshProUGUI jobDescDiff;
     public TextMeshProUGUI jobDescDescription;
+    public TextMeshProUGUI applyBTN;
 
     //set the object data to the parameters
-    public void createJButton(string jobTitle, int jobSalary, int jobDiff, string jobDescription)
+    public void createJButton(string apply, string jobTitle, int jobSalary, int jobDiff, string jobDescription)
     {
+        this.apply = apply;
         this.jobTitle = jobTitle;
         this.jobSalary = jobSalary;
         this.jobDiff = jobDiff;
@@ -35,5 +38,14 @@ public class JobButton : MonoBehaviour
         jobDescSalary.text = "Salary: $" + jobSalary;
         jobDescDiff.text = "Difficulty: " + jobDiff;
         jobDescDescription.text = jobDescription;
+        
+        if(apply == "1")
+        {
+            applyBTN.text = "Applied!";
+        }
+        else
+        {
+            applyBTN.text = "Apply";
+        }
     }
 }

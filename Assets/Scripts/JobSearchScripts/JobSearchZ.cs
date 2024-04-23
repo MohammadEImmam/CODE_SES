@@ -33,7 +33,7 @@ public class JobSearchZ : MonoBehaviour
     public void ReadTextAsset()
     {
         //copy the data from text file into readJobFile array. structure below
-        //Software Developer;WebDevelopment;100000;5;Job in orlando fl
+        //0;Software Developer;WebDevelopment;100000;5;Job in orlando fl
         //readJobFile[0] = Software Engineer, readJobFile[1] = WebDevelopment  , and so on ......
         readJobFile = jobJSON.text.Split(new string[] {";", "\n"}, StringSplitOptions.None);
     }
@@ -42,12 +42,12 @@ public class JobSearchZ : MonoBehaviour
     public void CreateJobObject(string userSearch)
     {   
         //read the data from readJobFile array and create each job listing and store in jobArray
-        for(int i = 0; i < readJobFile.Length; i+=5)
+        for(int i = 0; i < readJobFile.Length; i+=6)
         {
             //if user input is empty show all the job listings
             if(userSearch == "default")
             {
-                JobZ temp = new JobZ(readJobFile[i], readJobFile[i+1], Int32.Parse(readJobFile[i+2]), Int32.Parse(readJobFile[i+3]), readJobFile[i+4]);
+                JobZ temp = new JobZ(readJobFile[i], readJobFile[i+1], readJobFile[i+2], Int32.Parse(readJobFile[i+3]), Int32.Parse(readJobFile[i+4]), readJobFile[i+5]);
                 jobArray.Add(temp);
             }  
             else // else search by the user input
@@ -60,7 +60,7 @@ public class JobSearchZ : MonoBehaviour
                     //search for the keywords, ignore the first letter because capitalization doesn't matter
                     if(readJobFile[i].Contains(userSearchSplit[j].Substring(1, userSearchSplit[j].Length -1)))
                     {
-                        JobZ temp = new JobZ(readJobFile[i], readJobFile[i+1], Int32.Parse(readJobFile[i+2]), Int32.Parse(readJobFile[i+3]), readJobFile[i+4]);
+                        JobZ temp = new JobZ(readJobFile[i], readJobFile[i+1], readJobFile[i+2], Int32.Parse(readJobFile[i+3]), Int32.Parse(readJobFile[i+4]), readJobFile[i+5]);
                         jobArray.Add(temp);
                         break;
                     }

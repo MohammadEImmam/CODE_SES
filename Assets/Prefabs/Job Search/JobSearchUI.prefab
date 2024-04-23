@@ -358,6 +358,7 @@ GameObject:
   - component: {fileID: 1022581319042223955}
   - component: {fileID: 399146916844668553}
   - component: {fileID: 469224919516765888}
+  - component: {fileID: 947944252367545735}
   m_Layer: 5
   m_Name: ApplyButton
   m_TagString: Untagged
@@ -479,6 +480,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 947944252367545735}
+        m_TargetAssemblyTypeName: Apply, Assembly-CSharp
+        m_MethodName: ChangeApplyText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &469224919516765888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -496,6 +509,19 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   GameManager: {fileID: 0}
+--- !u!114 &947944252367545735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1757084633146205264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98077e1002119b9438e6907f4460ff1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applyBTN: {fileID: 4565230039914391178}
 --- !u!1 &1765365803044328473
 GameObject:
   m_ObjectHideFlags: 0
@@ -1626,7 +1652,7 @@ GameObject:
   - component: {fileID: 3004298577977280994}
   - component: {fileID: 4565230039914391178}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: ApplyBTN Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2384,7 +2410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.10724972, g: 0.07843137, b: 1, a: 1}
+  m_Color: {r: 0.19042888, g: 1, b: 0.07843137, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -2628,6 +2654,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6909767147806564435, guid: 3ca303209b8e53e40ae27d85d9c62127, type: 3}
+      propertyPath: applyBTN
+      value: 
+      objectReference: {fileID: 4565230039914391178}
     - target: {fileID: 6909767147806564435, guid: 3ca303209b8e53e40ae27d85d9c62127, type: 3}
       propertyPath: jobDescDiff
       value: 

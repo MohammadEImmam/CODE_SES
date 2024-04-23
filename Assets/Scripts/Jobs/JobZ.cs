@@ -19,14 +19,16 @@ public class JobZ
     public int jobDiff;
     public string jobType;
     public string jobDescription;
+    public string apply;
     
     //Constrcutor for the Job object
-    public JobZ(string jobTitle, string jobType, int jobSalary, int jobDiff, string jobDescription)
+    public JobZ(string apply, string jobTitle, string jobType, int jobSalary, int jobDiff, string jobDescription)
     {
         this.jobTitle = jobTitle;
         this.jobDescription = jobDescription;
         this.jobSalary = jobSalary;
         this.jobDiff = jobDiff;
+        this.apply = apply;
         this.jobType = jobType;
     }
 }
