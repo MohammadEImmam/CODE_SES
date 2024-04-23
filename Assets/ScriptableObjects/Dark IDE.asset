@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd0ea6e05f641444a9114873fed6ebc, type: 3}
   m_Name: Dark IDE
   m_EditorClassIdentifier: 
-  name: Dark IDE
+  name: Dark IDE Theme
   desc: Dark
   price: 10
   itemImage: {fileID: 21300000, guid: 3555462786dfc4145855cfbb150245f5, type: 3}

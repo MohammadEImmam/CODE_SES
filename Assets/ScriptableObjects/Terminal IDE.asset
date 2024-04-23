@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fbd0ea6e05f641444a9114873fed6ebc, type: 3}
-  m_Name: Orange IDE
+  m_Name: Terminal IDE
   m_EditorClassIdentifier: 
-  name: Orange IDE Theme
-  desc: Orange colors, very warm theme
+  name: Terminal IDE Theme
+  desc: Old school terminal look
   price: 15
-  itemImage: {fileID: 21300000, guid: 503e7d27acba32949805d772231fab61, type: 3}
+  itemImage: {fileID: 21300000, guid: d572970e3bc2835d2b0437d00b8c9bc5, type: 3}

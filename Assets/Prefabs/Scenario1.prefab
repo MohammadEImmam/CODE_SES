@@ -490,6 +490,7 @@ GameObject:
   - component: {fileID: 8849759878166692496}
   - component: {fileID: 3000581513488019860}
   - component: {fileID: 2358999037054023922}
+  - component: {fileID: 4799188310302320868}
   m_Layer: 5
   m_Name: Scenario1
   m_TagString: Untagged
@@ -580,6 +581,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4799188310302320868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5767316693177496064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17e26128b276cde4890764491d168b4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hidden: 0
+  icon: {fileID: 21300000, guid: ee0686c7ec2c262458e52bf63c3de781, type: 3}
 --- !u!1 &7231345721754252127
 GameObject:
   m_ObjectHideFlags: 0

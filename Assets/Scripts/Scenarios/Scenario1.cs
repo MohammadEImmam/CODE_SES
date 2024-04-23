@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Computer;
 
-public class Scenario1 : MonoBehaviour
+public class Scenario1 : Software
 {
     private void Start() {
         transform.localScale = Vector3.zero;
+        playAnimation();
     }
     public void playAnimation() 
     {

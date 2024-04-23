@@ -36,7 +36,7 @@ public class shopManager : MonoBehaviour
 
     public void increaseCoins()
     {
-        money+=100;
+        money+=10000;
         moneyUI.text = "Money: " + money.ToString();
     }
 

@@ -67,8 +67,8 @@ public class placeableObject : MonoBehaviour
                 else {
                     if(currentObject != null)
                         Destroy(currentObject);
-                    print(i+4);
-                    if(inventoryManager.getItem(i+4)) {
+                        
+                    if(inventoryManager.getItem(i+3)) {
                         currentObject = Instantiate(placeableObjects[i]);
                         prefabIndex = i;
                     }
@@ -111,7 +111,8 @@ public class placeableObject : MonoBehaviour
     private bool canPlayerDelete(RaycastHit hit) {
         GameObject obj = hit.transform.gameObject;
 
-        if(obj.name.Contains("Floor"))
+        if(obj.name.Contains("Floor") || obj.name == "ComputerSetup"
+            || obj.name == "mesh_windowhole")
             return false;
 
         return true;
