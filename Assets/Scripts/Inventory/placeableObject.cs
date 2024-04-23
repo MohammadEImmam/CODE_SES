@@ -24,6 +24,7 @@ public class placeableObject : MonoBehaviour
         // was clicked twice and the game object is destroyed
         if(currentObject != null) {
             Destroy(currentObject.GetComponent<BoxCollider>());
+            Destroy(currentObject.GetComponent<MeshCollider>());
             MoveObjectWithMouse();
             MouseWheeleRotate();
             Clicked();
@@ -66,8 +67,8 @@ public class placeableObject : MonoBehaviour
                 else {
                     if(currentObject != null)
                         Destroy(currentObject);
-
-                    if(inventoryManager.getItem(i)) {
+                    print(i+4);
+                    if(inventoryManager.getItem(i+4)) {
                         currentObject = Instantiate(placeableObjects[i]);
                         prefabIndex = i;
                     }

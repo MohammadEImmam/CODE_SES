@@ -338,7 +338,7 @@ GameObject:
   - component: {fileID: 23264095107837902}
   - component: {fileID: -6527486499241377885}
   - component: {fileID: 8145544948078984379}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: chair_new
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ MonoBehaviour:
     - Transform/position/y
     - Transform/position/z
     - Transform/position
-    ModificationVersion: 7
+    ModificationVersion: 8
     ComponentsEnabled: []
     HashFieldsEnabled: []
     ObjectsEnabled: 
@@ -885,7 +885,7 @@ MonoBehaviour:
       m_count: 4
       m_lastIndex: 4
       m_freeList: -1
-      m_version: 221
+      m_version: 226
     HashSetObjectsEnabled:
       m_buckets: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000001000000000000000000000000000000
       m_slots:
@@ -943,7 +943,7 @@ MonoBehaviour:
       m_count: 2
       m_lastIndex: 2
       m_freeList: -1
-      m_version: 60
+      m_version: 63
     HashSetComponentsEnabled:
       m_buckets: 010000000000000000000000
       m_slots:
@@ -959,7 +959,7 @@ MonoBehaviour:
       m_count: 1
       m_lastIndex: 1
       m_freeList: -1
-      m_version: 12
+      m_version: 14
     AreValidSavedHashs: 1
   Position: 0
   Rotation: 0

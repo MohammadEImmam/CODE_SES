@@ -55,7 +55,6 @@ public class shopManager : MonoBehaviour
     {
         if (panels[buttonNumber].pricetxt.text != "" && money >= shopItemsSO[buttonNumber].price)
         {
-            print("HERE");
             money = money - shopItemsSO[buttonNumber].price;
             moneyUI.text = "Money: " + money.ToString();
             
@@ -63,13 +62,27 @@ public class shopManager : MonoBehaviour
             panels[buttonNumber].pricetxt.text = "";
 
             //unlock item for player
-            if(buttonNumber > 3) {
-                inventoryManager.setItem(buttonNumber-4, true);
+            inventoryManager.setItem(buttonNumber, true);
+            if(buttonNumber < 3) {
+                print("PURCHASED");
+                Scene targetScene = SceneManager.GetSceneByName("Computer");
+                if(targetScene != null)
+                    print("FOUND SCENE");
+                GameObject inventory = GameObject.Find("Inventory");
+                if(inventory != null)
+                    print("FOUND GO");
+                Inventory script = inventory.GetComponent<Inventory>();
+                if(script != null)
+                    print("FOUND SCRIPT");
+                script.setTheme(buttonNumber);
             }
+            //if(buttonNumber > 3) {
+            //    inventoryManager.setItem(buttonNumber-4, true);
+            //}
          
-                editor = GameObject.Find("InGameCodeEditor_here");
-                CodeEditor script = editor.GetComponent<CodeEditor>();
-                script.editorTheme = themes[buttonNumber];
+            //    editor = GameObject.Find("InGameCodeEditor_here");
+            //    CodeEditor script = editor.GetComponent<CodeEditor>();
+            //    script.editorTheme = themes[buttonNumber];
             
         }
 

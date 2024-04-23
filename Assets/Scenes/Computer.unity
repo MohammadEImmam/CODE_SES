@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.45142823, g: 0.5007451, b: 0.5713717, a: 1}
+  m_IndirectSpecularColor: {r: 0.451428, g: 0.5007451, b: 0.57137185, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4108,12 +4108,12 @@ MonoBehaviour:
   m_margin: {x: 3.1619363, y: -0.034653664, z: 6.5783734, w: 0.38763094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 754733457}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &754733457
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6322,12 +6322,12 @@ MonoBehaviour:
   m_margin: {x: 3.1619363, y: -0.23011923, z: 6.5783734, w: 0.38763094}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  _SortingLayer: 0
-  _SortingLayerID: 0
-  _SortingOrder: 0
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1216016215}
   m_maskType: 0
+  _SortingLayer: 0
+  _SortingLayerID: 0
+  _SortingOrder: 0
 --- !u!23 &1216016215
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9260,7 +9260,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1756314201}
-  - component: {fileID: 1756314202}
   - component: {fileID: 1756314203}
   m_Layer: 0
   m_Name: Manager
@@ -9284,19 +9283,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1756314202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1756314199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f854f3df502f9034ab5f1b3b9ef7bca2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Open: 1
 --- !u!114 &1756314203
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11055,7 +11041,7 @@ GameObject:
   - component: {fileID: 2138149437}
   - component: {fileID: 2138149436}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Inventory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

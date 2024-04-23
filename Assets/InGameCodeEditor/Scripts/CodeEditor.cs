@@ -52,7 +52,7 @@ namespace InGameCodeEditor
         
         [Header("Themes")]
         [SerializeField]
-        public CodeEditorTheme editorTheme = null;
+        public CodeEditorTheme editorTheme;
         [SerializeField]
         private CodeLanguageTheme languageTheme = null;
 
@@ -790,18 +790,18 @@ namespace InGameCodeEditor
         private void ApplyTheme()
         {
             // Check for missing references
-            if (AllReferencesAssigned() == false)
-                throw new MissingReferenceException("Cannot apply theme because one or more required component references are missing. Make sure all references under the 'Elements' header are assigned");
+            //if (AllReferencesAssigned() == false)
+              //  throw new MissingReferenceException("Cannot apply theme because one or more required component references are missing. Make sure all references under the 'Elements' header are assigned");
 
             bool nullTheme = false;
 
             // Check for no theme
-            if (editorTheme == null)
-            {
-                // Get the default theme
-                editorTheme = CodeEditorTheme.DefaultTheme;
-                nullTheme = true;
-            }
+            //if (editorTheme == null)
+            //{
+            //    // Get the default theme
+            //    editorTheme = CodeEditorTheme.DefaultTheme;
+            //    nullTheme = true;
+           // }
 
             // Apply theme colors
             inputField.caretColor = editorTheme.caretColor;

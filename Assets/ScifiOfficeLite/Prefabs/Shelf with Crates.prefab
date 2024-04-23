@@ -333,7 +333,7 @@ GameObject:
   - component: {fileID: 7765092334790269051}
   - component: {fileID: 4848995953488529523}
   - component: {fileID: 7116701557539832805}
-  m_Layer: 2
+  m_Layer: 0
   m_Name: Shelf with Crates
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -375,7 +375,7 @@ MonoBehaviour:
     - Transform/position/y
     - Transform/position/z
     - Transform/position
-    ModificationVersion: 11
+    ModificationVersion: 12
     ComponentsEnabled: []
     HashFieldsEnabled: []
     ObjectsEnabled: 
@@ -830,7 +830,7 @@ MonoBehaviour:
       m_count: 4
       m_lastIndex: 4
       m_freeList: -1
-      m_version: 385
+      m_version: 390
     HashSetObjectsEnabled:
       m_buckets: 0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000200000001000000000000000000000000000000
       m_slots:
@@ -888,7 +888,7 @@ MonoBehaviour:
       m_count: 2
       m_lastIndex: 2
       m_freeList: -1
-      m_version: 104
+      m_version: 107
     HashSetComponentsEnabled:
       m_buckets: 010000000000000000000000
       m_slots:
@@ -904,7 +904,7 @@ MonoBehaviour:
       m_count: 1
       m_lastIndex: 1
       m_freeList: -1
-      m_version: 20
+      m_version: 22
     AreValidSavedHashs: 1
   Position: 0
   Rotation: 0
@@ -989,7 +989,7 @@ MonoBehaviour:
     - GameObject/name
     - GameObject/activeSelf
     - GameObject
-    ModificationVersion: 3
+    ModificationVersion: 4
     ComponentsEnabled: []
     HashFieldsEnabled: []
     ObjectsEnabled: 
@@ -1444,7 +1444,7 @@ MonoBehaviour:
       m_count: 54
       m_lastIndex: 54
       m_freeList: -1
-      m_version: 111
+      m_version: 166
     HashSetObjectsEnabled:
       m_buckets: 0500000008000000000000000000000000000000000000000d0000000400000003000000000000000900000007000000020000000b000000000000000600000000000000
       m_slots:
@@ -1502,7 +1502,7 @@ MonoBehaviour:
       m_count: 13
       m_lastIndex: 13
       m_freeList: -1
-      m_version: 29
+      m_version: 43
     HashSetComponentsEnabled:
       m_buckets: 010000000000000000000000
       m_slots:
@@ -1518,7 +1518,7 @@ MonoBehaviour:
       m_count: 1
       m_lastIndex: 1
       m_freeList: -1
-      m_version: 5
+      m_version: 7
     AreValidSavedHashs: 1
   Position: 0
   Rotation: 0
