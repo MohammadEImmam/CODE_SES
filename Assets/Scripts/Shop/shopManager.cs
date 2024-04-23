@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 using UnityEngine.SceneManagement;
+using InGameCodeEditor;
 
 public class shopManager : MonoBehaviour
 {
@@ -15,12 +16,17 @@ public class shopManager : MonoBehaviour
     public shopTemplate[] panels;
     public Button[] buttons;
     public Image[] images;
+    public CodeEditorTheme[] themes;
+    private GameObject editor;
+    public string scene = "Computer";
 
 
     public bool shouldUnloadScene { get; set; }
 
     public void Start()
     {
+        // disable event system from previous scene
+
         // loads in available scriptable objects with their respective info
         loadItems();
    
@@ -47,15 +53,24 @@ public class shopManager : MonoBehaviour
 
     public void purchase(int buttonNumber)
     {
-        if (money >= shopItemsSO[buttonNumber].price)
+        if (panels[buttonNumber].pricetxt.text != "" && money >= shopItemsSO[buttonNumber].price)
         {
+            print("HERE");
             money = money - shopItemsSO[buttonNumber].price;
             moneyUI.text = "Money: " + money.ToString();
+            
+            shopItemsSO[buttonNumber].price = 0;
+            panels[buttonNumber].pricetxt.text = "";
 
             //unlock item for player
             if(buttonNumber > 3) {
                 inventoryManager.setItem(buttonNumber-4, true);
             }
+         
+                editor = GameObject.Find("InGameCodeEditor_here");
+                CodeEditor script = editor.GetComponent<CodeEditor>();
+                script.editorTheme = themes[buttonNumber];
+            
         }
 
         // update money
