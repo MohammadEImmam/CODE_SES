@@ -46,7 +46,10 @@ public class shopManager : MonoBehaviour
         {
             panels[i].titletxt.text = shopItemsSO[i].name;
             panels[i].desctxt.text = shopItemsSO[i].desc;
-            panels[i].pricetxt.text = shopItemsSO[i].price.ToString();
+            if(PlayerPrefs.GetInt(i.ToString()) == 1)
+                panels[i].pricetxt.text = "purchased";
+            else
+                panels[i].pricetxt.text = shopItemsSO[i].price.ToString();
             images[i].sprite = shopItemsSO[i].itemImage;
         }
     } 
@@ -55,7 +58,9 @@ public class shopManager : MonoBehaviour
     {
         if (panels[buttonNumber].pricetxt.text != "" && money >= shopItemsSO[buttonNumber].price)
         {
-            money = money - shopItemsSO[buttonNumber].price;
+            if(panels[buttonNumber].pricetxt.text != "purchased")
+                 money = money - shopItemsSO[buttonNumber].price;
+                 
             moneyUI.text = "Money: " + money.ToString();
             
             shopItemsSO[buttonNumber].price = 0;
