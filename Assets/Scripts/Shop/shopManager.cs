@@ -63,17 +63,14 @@ public class shopManager : MonoBehaviour
 
             //unlock item for player
             inventoryManager.setItem(buttonNumber, true);
+
             if(buttonNumber < 3) {
-                print("PURCHASED");
                 Scene targetScene = SceneManager.GetSceneByName("Computer");
-                if(targetScene != null)
-                    print("FOUND SCENE");
+
                 GameObject inventory = GameObject.Find("Inventory");
-                if(inventory != null)
-                    print("FOUND GO");
+
                 Inventory script = inventory.GetComponent<Inventory>();
-                if(script != null)
-                    print("FOUND SCRIPT");
+
                 script.setTheme(buttonNumber);
             }
             //if(buttonNumber > 3) {

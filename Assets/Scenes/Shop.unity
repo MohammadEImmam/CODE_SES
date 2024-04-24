@@ -2170,7 +2170,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_Name
-      value: item_template (5)
+      value: pottedPlant
       objectReference: {fileID: 0}
     - target: {fileID: 214407545192573459, guid: d07ed99597ecd504c90b99b4a8cac288, type: 3}
       propertyPath: m_IsActive

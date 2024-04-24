@@ -10,6 +10,9 @@ public static class inventoryManager {
 
 	public static bool getItem(int index) {
 		try {
+			if(PlayerPrefs.GetInt(index.ToString()) == 1)
+				return true;
+
 			return isItemAvailable[index];
 		}
 		catch (IndexOutOfRangeException e){
@@ -21,10 +24,7 @@ public static class inventoryManager {
 	public static void setItem(int index, bool val) {
 		try {
 			isItemAvailable[index] = val;
-
-			if(index < 4) {
-
-			}
+			PlayerPrefs.SetInt(index.ToString(), 1);
 		}
 		catch (IndexOutOfRangeException e){
 			throw new IndexOutOfRangeException("index out of range", e);
